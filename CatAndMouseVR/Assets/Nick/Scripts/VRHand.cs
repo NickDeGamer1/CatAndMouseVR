@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class VRHand : MonoBehaviour
 {
     public float movementNum = 0.0f;
-    public TextMeshPro TextMeshPro;
+    public TextMeshPro textMeshPro;
     private Vector3 bufferPos = new Vector3(0,0,0);
+
 
     private void FixedUpdate()
     {
@@ -15,10 +17,12 @@ public class VRHand : MonoBehaviour
 
         movementNum = (Mathf.Abs(moveX) + Mathf.Abs(moveY) + Mathf.Abs(moveZ)) / 3;
 
-        if (TextMeshPro != null )
+        if (textMeshPro != null )
         {
-            TextMeshPro.text = movementNum.ToString();
+            textMeshPro.text = movementNum.ToString();
         }
         bufferPos = transform.localPosition;
     }
+
+
 }

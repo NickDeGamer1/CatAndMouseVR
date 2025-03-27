@@ -990,6 +990,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "VRPlayer",
+            "id": "c7f090d4-08a2-4371-b69d-a8e11aae97b1",
+            "actions": [
+                {
+                    "name": "VRLook",
+                    "type": "Value",
+                    "id": "7915736f-44dc-4925-806a-aa2f2774759b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d9fb2488-2af0-4e4f-91a3-b2346172a07a",
+                    "path": "<QuestTouchPlusController>{RightHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "VRLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

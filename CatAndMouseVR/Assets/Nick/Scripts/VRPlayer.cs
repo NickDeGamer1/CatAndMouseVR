@@ -27,6 +27,9 @@ public class VRPlayer : MonoBehaviour
     [SerializeField]
     GameObject DebugObj;
 
+    GameObject[] fsPlayers;
+
+
     private CharacterController cc;
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
@@ -37,6 +40,7 @@ public class VRPlayer : MonoBehaviour
         cc = GetComponent<CharacterController>();
         LeftHand = LeftHandObject.GetComponent<VRHand>();
         RightHand = RightHandObject.GetComponent<VRHand>();
+        fsPlayers = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -56,25 +60,41 @@ public class VRPlayer : MonoBehaviour
         //SendHapticFeedback(1, Time.deltaTime);
         //SendHapticFeedback(1, Time.deltaTime);
 
-        float dist = Vector3.Distance(transform.position, DebugObj.transform.position);
+        float dist = vibCutoff + 1;
+
+        foreach(GameObject i in fsPlayers) {
+            if (Vector3.Distance(transform.position, i.transform.position) < vibCutoff)
+            {
+                dist = Vector3.Distance(transform.position, i.transform.position);
+                break;
+            }
+        }
+
+        if (dist < vibCutoff)
+        {
+            float Strength = 1 - (dist / vibCutoff);
+            SendHapticFeedback(Strength, Time.deltaTime);
+        }
 
         if (TMP != null)
         {
             TMP.text = dist.ToString();
         }
 
-        if (dist < vibCutoff && dist >= (vibCutoff * .6666))
-        {
-            SendHapticFeedback(0.33f, Time.deltaTime);
-        }
-        else if (dist < (vibCutoff * .6666) && dist >= (vibCutoff * .3333))
-        {
-            SendHapticFeedback(0.66f, Time.deltaTime);
-        }
-        else if (dist < (vibCutoff * .3333))
-        {
-            SendHapticFeedback(1, Time.deltaTime);
-        }
+        
+
+        //if (dist < vibCutoff && dist >= (vibCutoff * .6666))
+        //{
+        //    SendHapticFeedback(0.33f, Time.deltaTime);
+        //}
+        //else if (dist < (vibCutoff * .6666) && dist >= (vibCutoff * .3333))
+        //{
+        //    SendHapticFeedback(0.66f, Time.deltaTime);
+        //}
+        //else if (dist < (vibCutoff * .3333))
+        //{
+        //    SendHapticFeedback(1, Time.deltaTime);
+        //}
 
     }
 

@@ -1,0 +1,34 @@
+# Blender 4.4.0 MTL File: 'CuteCar.blend'
+# www.blender.org
+
+newmtl Body_Steve
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd HappyCar/Steve/Body-color.png
+
+newmtl Collar_steve
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd HappyCar/Steve/Collar-color.png
+map_Ns HappyCar/Steve/Collar-roughness.png
+map_refl HappyCar/Steve/Collar-metallic.png
+
+newmtl Head_Steve
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd HappyCar/Steve/Head-color.png
+map_Ns HappyCar/Steve/Head-roughness.png
+map_refl HappyCar/Steve/Head-metallic.png

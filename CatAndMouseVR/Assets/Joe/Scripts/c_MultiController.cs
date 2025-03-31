@@ -18,9 +18,14 @@ public class c_MultiController : MonoBehaviour
 
     private Vector2 movementInput = Vector2.zero;
     private bool hasJumped = false;
+
+    [SerializeField]
+    GameObject catModel;
+    private Animator anim;
     
     private void Start()
     {
+        anim = catModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
     }
 
@@ -46,6 +51,12 @@ public class c_MultiController : MonoBehaviour
         //Movement
         Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
         controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (movementInput.x == 0 && movementInput.y == 0){
+            anim.SetBool("isMoving", false);
+        }else{
+            anim.SetBool("isMoving", true);
+        }
 
         //Rotates to the direction we are facing
         if (move != Vector3.zero)

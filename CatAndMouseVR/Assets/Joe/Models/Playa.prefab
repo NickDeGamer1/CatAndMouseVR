@@ -64,6 +64,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3f948c7d75d01524e903bcc756b5ef12, type: 2}
   - {fileID: 2100000, guid: d40be9bd2d98bba4292c2a9e6173fc20, type: 2}
   - {fileID: 2100000, guid: fef25b924b58a2f43a9f2c7783f7a657, type: 2}
+  outlineMat:
+  - {fileID: 2100000, guid: 3e7569affaf09fb4d8d7ba4dbba23568, type: 2}
+  - {fileID: 2100000, guid: 4ba74766951c5434f9fecf899da2364f, type: 2}
+  - {fileID: 2100000, guid: 6adda2c5454e17d47a850f99cbc597cd, type: 2}
+  - {fileID: 2100000, guid: fd30fa39ec208c340bcc51a91213384b, type: 2}
   headObj: {fileID: 6122600986139259107}
   bodyObj: {fileID: 2324515604327686311}
   collarObj: {fileID: 4061208222431024125}
@@ -147,7 +152,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 3
+  m_Height: 2.58
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -231,6 +236,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4396642182433536433, guid: 7401d7b9fd729fa46829c9adad222f32, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1debc03623acac0468a2ed731b517e5c, type: 2}
+    - target: {fileID: -4396642182433536433, guid: 7401d7b9fd729fa46829c9adad222f32, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 3e7569affaf09fb4d8d7ba4dbba23568, type: 2}
@@ -242,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: 7401d7b9fd729fa46829c9adad222f32, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd93e10caafaea24f8ab2cf81bea1f55, type: 2}
     - target: {fileID: 1630794972795428178, guid: 7401d7b9fd729fa46829c9adad222f32, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 

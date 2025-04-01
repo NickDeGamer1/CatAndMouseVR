@@ -10,6 +10,8 @@ public class c_catSkinController : MonoBehaviour
     Material[] bodyMat;
     [SerializeField]
     Material[] collarMat;
+    [SerializeField]
+    Material[] outlineMat;
     
     [SerializeField]
     GameObject headObj;
@@ -21,10 +23,10 @@ public class c_catSkinController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        headObj.GetComponent<SkinnedMeshRenderer>().material =  headMat[catSkin];
-        collarObj.GetComponent<SkinnedMeshRenderer>().material =  collarMat[catSkin];
-        bodyObj.GetComponent<SkinnedMeshRenderer>().material =  bodyMat[catSkin];
-        //headObj.GetComponent<Renderer>().material[1] =  outlineMat[catSkin];
+
+        headObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[catSkin], outlineMat[catSkin]};
+        collarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[catSkin], outlineMat[catSkin]};
+        bodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[catSkin], outlineMat[catSkin]};
 
 
 

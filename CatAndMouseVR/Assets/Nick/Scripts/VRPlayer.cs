@@ -34,6 +34,9 @@ public class VRPlayer : MonoBehaviour
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
 
+
+    TCPClient audioserver;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +44,9 @@ public class VRPlayer : MonoBehaviour
         LeftHand = LeftHandObject.GetComponent<VRHand>();
         RightHand = RightHandObject.GetComponent<VRHand>();
         fsPlayers = GameObject.FindGameObjectsWithTag("Player");
+
+
+        audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
     }
 
     // Update is called once per frame
@@ -81,7 +87,7 @@ public class VRPlayer : MonoBehaviour
             TMP.text = dist.ToString();
         }
 
-        
+
 
         //if (dist < vibCutoff && dist >= (vibCutoff * .6666))
         //{
@@ -96,6 +102,14 @@ public class VRPlayer : MonoBehaviour
         //    SendHapticFeedback(1, Time.deltaTime);
         //}
 
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            audioserver.PlayAudioTV("BabaBoohey.wav");
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            audioserver.PlayAudioTV("yohabaB.wav");
+        }
     }
 
     void SendHapticFeedback(float amplitude, float duration)

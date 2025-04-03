@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - VRPlayer
+  - AudioServer
   layers:
   - Default
   - TransparentFX

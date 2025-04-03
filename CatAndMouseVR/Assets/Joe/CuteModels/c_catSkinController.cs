@@ -23,19 +23,14 @@ public class c_catSkinController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        headObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[catSkin], outlineMat[catSkin]};
-        collarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[catSkin], outlineMat[catSkin]};
-        bodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[catSkin], outlineMat[catSkin]};
-
-
-
-        
+        SetSkin(catSkin);
     }
 
     // Update is called once per frame
-    void Update()
+    public void SetSkin(int skinNum)
     {
-        
+        headObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
+        collarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
+        bodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
     }
 }

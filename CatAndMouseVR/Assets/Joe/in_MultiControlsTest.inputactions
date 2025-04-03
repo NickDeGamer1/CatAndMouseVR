@@ -70,6 +70,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "47c1a2fc-1653-4a68-8f9c-dd80f8a68d15",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller2",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WASD",
                     "id": "219d501a-0739-423f-bc1f-2d56756ca1db",
                     "path": "2DVector",
@@ -145,6 +156,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa18e110-dd67-4080-8072-69626a6a4ce4",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller2",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -178,6 +200,17 @@
             "devices": [
                 {
                     "devicePath": "<XInputController>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller2",
+            "bindingGroup": "Controller2",
+            "devices": [
+                {
+                    "devicePath": "<DualSenseGamepadHID>",
                     "isOptional": true,
                     "isOR": false
                 }

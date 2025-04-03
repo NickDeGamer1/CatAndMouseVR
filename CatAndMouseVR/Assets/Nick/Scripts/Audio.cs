@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        Process.Start("C:/Users/Nick/Documents/GitHub/CatAndMouseVR/AudioServer/CAMVRAudio.exe");
         try
         {
             client = new TcpClient("127.0.0.1", 12345);
@@ -20,7 +22,7 @@ public class TCPClient : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogError("Error: " + e.Message);
+            //Debug.LogError("Error: " + e.Message);
         }
     }
 

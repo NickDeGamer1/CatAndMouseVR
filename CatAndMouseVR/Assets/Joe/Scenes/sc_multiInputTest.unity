@@ -371,7 +371,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 2137861146124022983, guid: ce6c36d6e0dad514c94856c06f66e438, type: 3}
-  m_SplitScreen: 1
+  m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 1
   m_FixedNumberOfSplitScreens: 4
   m_SplitScreenRect:
@@ -627,7 +627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1315675634271472958, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5872161
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 1315675634271472958, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
       propertyPath: m_LocalPosition.z

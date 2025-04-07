@@ -54,6 +54,8 @@ public class c_CatController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
 
         jumpReset = 1.1f;
+
+        Debug.Log(c_PlayerManager.instance.catSpawnPoints[0].transform.position);
         
         transform.position = c_PlayerManager.instance.catSpawnPoints[0].transform.position;
 

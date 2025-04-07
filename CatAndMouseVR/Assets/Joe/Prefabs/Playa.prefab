@@ -98,6 +98,7 @@ MonoBehaviour:
   creepyHeadObj: {fileID: 3263610196013706723}
   creepyBodyObj: {fileID: 6484941187332046247}
   creepyCollarObj: {fileID: 4747139642897305341}
+  playaInput: {fileID: 8434016676693962687}
 --- !u!114 &8434016676693962687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
-  m_AllowXRRendering: 1
+  m_AllowXRRendering: 0
   m_AllowHDROutput: 1
   m_UseScreenCoordOverride: 0
   m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class c_catSkinController : MonoBehaviour
 {
@@ -40,10 +41,13 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     GameObject creepyCollarObj;
 
+    [SerializeField]
+    public PlayerInput playaInput;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SetSkin(catSkin);
+        SetSkin(playaInput.playerIndex);
     }
 
     // Update is called once per frame

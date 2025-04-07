@@ -50,6 +50,9 @@ public class c_PlayerManager : MonoBehaviour
     {
         playerList.Add(playerInput);
 
+        Transform playerParent = playerInput.transform.parent;
+        playerParent.position = catSpawnPoints[0].transform.position;
+
         if (PlayerJoinedGame != null)
         {
             PlayerJoinedGame(playerInput);

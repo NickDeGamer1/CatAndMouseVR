@@ -13,12 +13,21 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     Material[] outlineMat;
     
+    //cute cat
     [SerializeField]
-    GameObject headObj;
+    GameObject cuteHeadObj;
     [SerializeField]
-    GameObject bodyObj;
+    GameObject cuteBodyObj;
     [SerializeField]
-    GameObject collarObj;
+    GameObject cuteCollarObj;
+
+    //creepy cat
+    [SerializeField]
+    GameObject creepyHeadObj;
+    [SerializeField]
+    GameObject creepyBodyObj;
+    [SerializeField]
+    GameObject creepyCollarObj;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,8 +38,12 @@ public class c_catSkinController : MonoBehaviour
     // Update is called once per frame
     public void SetSkin(int skinNum)
     {
-        headObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
-        collarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
-        bodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
+        cuteHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
+        cuteCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
+        cuteBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
+
+        creepyHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
+        creepyCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
+        creepyBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
     }
 }

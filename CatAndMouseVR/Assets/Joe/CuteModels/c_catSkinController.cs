@@ -12,6 +12,17 @@ public class c_catSkinController : MonoBehaviour
     Material[] collarMat;
     [SerializeField]
     Material[] outlineMat;
+
+    [SerializeField]
+    Material[] creepyHeadMat;
+    [SerializeField]
+    Material[] creepyEyeMat;
+    [SerializeField]
+    Material[] creepyBodyMat;
+    [SerializeField]
+    Material[] creepyCollarMat;
+    [SerializeField]
+    Material creepyTeethMat;
     
     //cute cat
     [SerializeField]
@@ -42,8 +53,8 @@ public class c_catSkinController : MonoBehaviour
         cuteCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
         cuteBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
 
-        creepyHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
-        creepyCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
-        creepyBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
+        creepyHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyHeadMat[skinNum], creepyTeethMat, creepyEyeMat[skinNum]};
+        creepyCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyCollarMat[skinNum]};
+        creepyBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyBodyMat[skinNum]};
     }
 }

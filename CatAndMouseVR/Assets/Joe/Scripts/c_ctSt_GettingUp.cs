@@ -7,6 +7,7 @@ public class c_ctSt_GettingUp : c_ctSt_Class
     public override void EnterState(c_CatController player)
     {
        player.anim.SetBool("hasLanded", true);
+       player.animCreep.SetBool("hasLanded", true);
        player.hasJumped = false;
        //jump
         player.playerVelocity.y += Mathf.Sqrt(0.5f * -2.0f * player.gravityValue);
@@ -22,12 +23,17 @@ public class c_ctSt_GettingUp : c_ctSt_Class
         //If play the idle animation then we done
         if (!player.anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
+            
+            //reset land
+            player.anim.SetBool("hasLanded", false);
+            player.animCreep.SetBool("hasLanded", false);
+
             //reset trigger
-            //player.anim.ResetTrigger("gettingUp");
             //prevent jumping again
             player.hasJumped = false;
             //revert to idle
             player.SwitchState(player.idleState);
+
         }
            
     }

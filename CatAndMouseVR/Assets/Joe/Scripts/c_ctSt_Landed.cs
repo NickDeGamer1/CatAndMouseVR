@@ -7,6 +7,7 @@ public class c_ctSt_Landed : c_ctSt_Class
     public override void EnterState(c_CatController player)
     {
        player.anim.SetBool("hasLanded", true);
+       player.animCreep.SetBool("hasLanded", true);
        player.hasJumped = false;
     }
 
@@ -22,8 +23,10 @@ public class c_ctSt_Landed : c_ctSt_Class
             
             //change anim
             player.anim.SetTrigger("gettingUp");
+            player.animCreep.SetTrigger("gettingUp");
             //remove has jumped
             player.hasJumped = false;
+            player.JumpCountDown();
             //switch to anim
             player.SwitchState(player.gettingUpState);
         }

@@ -8,8 +8,10 @@ public class c_ctSt_Jump : c_ctSt_Class
     {
         //Do initial jump action
        player.JumpStart();
+       player.canJump = false;
        //set is pounce
        player.anim.SetBool("isPouncing", true);
+       player.animCreep.SetBool("isPouncing", true);
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class c_ctSt_Jump : c_ctSt_Class
             player.playerVelocity.x = 0f;
             //turn off pouncing
             player.anim.SetBool("isPouncing", false);
+            player.animCreep.SetBool("isPouncing", false);
             //switch to landed state
             player.SwitchState(player.landedState);
         }

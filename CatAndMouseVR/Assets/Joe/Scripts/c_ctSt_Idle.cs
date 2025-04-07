@@ -26,7 +26,12 @@ public class c_ctSt_Idle : c_ctSt_Class
         //pounce when we pounce.
         if (player.hasJumped == true)
         {
-            player.SwitchState(player.jumpState);
+            if (player.canJump)
+            {
+                player.SwitchState(player.jumpState);
+            }else{
+                player.hasJumped = false;
+            }
         }
            
         }

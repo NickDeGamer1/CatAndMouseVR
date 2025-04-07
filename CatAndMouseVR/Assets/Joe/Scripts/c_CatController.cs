@@ -22,11 +22,17 @@ public class c_CatController : MonoBehaviour
     public bool groundedPlayer;
     [SerializeField]
     public float gravityValue = -9.81f;
+    public float jumpReset = 1.2f;
+    public bool canJump = true;
+    private bool timerActive = false;
 
     //ANIMS
     [SerializeField]
     GameObject catModel;
+    [SerializeField]
+    GameObject catCreepyModel;
     public Animator anim;
+    public Animator animCreep;
 
     //POUNCING
     private int jumpStage = 0; // 0 = not pouncing; 1 = readying to pounce; 2 = pouncing; 3 = getting back up;
@@ -45,6 +51,7 @@ public class c_CatController : MonoBehaviour
     void Start()
     {
         anim = catModel.GetComponent<Animator>();
+        animCreep = catCreepyModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
 
         SwitchState(idleState);
@@ -65,10 +72,10 @@ public class c_CatController : MonoBehaviour
         Vector3 playerForward = transform.forward;
         
         //jump
-        playerVelocity.y += Mathf.Sqrt(0.5f * -2.0f * gravityValue);
+        playerVelocity.y += Mathf.Sqrt(2f * -2.0f * gravityValue);
 
         //dash
-        playerVelocity += playerForward * (Mathf.Sqrt(4f * -2.0f * gravityValue));
+        playerVelocity += playerForward * (Mathf.Sqrt(8f * -2.0f * gravityValue));
     }
 
     public void Move()
@@ -106,9 +113,27 @@ public class c_CatController : MonoBehaviour
         //anim
         if ((SENSI < movementInput.y) || ((-1 * SENSI) > movementInput.y) && currentState != jumpState){
             anim.SetBool("isMoving", true);
+            animCreep.SetBool("isMoving", true);
         }else{
             anim.SetBool("isMoving", false);
+            animCreep.SetBool("isMoving", false);
         }
+        
+        if (timerActive){
+
+            jumpReset -= Time.deltaTime;
+        }
+        
+        if (jumpReset <= 0.0f){
+            canJump = true;
+            timerActive = false;
+            jumpReset = 1.1f;
+        }
+    }
+
+    public void JumpCountDown()
+    {
+        timerActive = true;
     }
 
     public void SwitchState(c_ctSt_Class newState)

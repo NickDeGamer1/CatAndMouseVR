@@ -22,7 +22,7 @@ public class c_CatController : MonoBehaviour
     public bool groundedPlayer;
     [SerializeField]
     public float gravityValue = -9.81f;
-    public float jumpReset = 1.2f;
+    public float jumpReset = 1.1f;
     public bool canJump = true;
     private bool timerActive = false;
 
@@ -53,6 +53,8 @@ public class c_CatController : MonoBehaviour
         anim = catModel.GetComponent<Animator>();
         animCreep = catCreepyModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
+
+        jumpReset = 1.1f;
 
         SwitchState(idleState);
     }

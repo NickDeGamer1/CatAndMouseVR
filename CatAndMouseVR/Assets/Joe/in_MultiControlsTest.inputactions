@@ -198,7 +198,7 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
-                    "isOptional": false,
+                    "isOptional": true,
                     "isOR": false
                 }
             ]
@@ -231,7 +231,7 @@
             "devices": [
                 {
                     "devicePath": "<DualSenseGamepadHID>",
-                    "isOptional": true,
+                    "isOptional": false,
                     "isOR": false
                 }
             ]

@@ -44,7 +44,6 @@ public class c_CatController : MonoBehaviour
     public c_ctSt_Walk walkState = new c_ctSt_Walk();
     public c_ctSt_Jump jumpState = new c_ctSt_Jump();
     public c_ctSt_Landed landedState = new c_ctSt_Landed();
-    
     public c_ctSt_GettingUp gettingUpState = new c_ctSt_GettingUp();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,6 +54,8 @@ public class c_CatController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
 
         jumpReset = 1.1f;
+        
+        transform.position = c_PlayerManager.instance.catSpawnPoints[0].transform.position;
 
         SwitchState(idleState);
     }

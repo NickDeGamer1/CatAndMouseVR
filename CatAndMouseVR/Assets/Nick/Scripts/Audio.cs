@@ -2,7 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
 public class TCPClient : MonoBehaviour
@@ -13,7 +15,7 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        Process.Start("C:/Users/Nick/Documents/GitHub/CatAndMouseVR/AudioServer/CAMVRAudio.exe");
+        Process.Start("Assets/Nick/Audio/Cat And Mouse VR Audio Server.exe");
         try
         {
             client = new TcpClient("127.0.0.1", 12345);

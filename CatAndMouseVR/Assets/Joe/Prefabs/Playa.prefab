@@ -160,7 +160,7 @@ MonoBehaviour:
     m_ActionId: a292fbb8-7528-4195-8836-62d3a603d2dd
     m_ActionName: 'Cat/Start[/DualSenseGamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Controller1
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Cat
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 4389351332408556710}

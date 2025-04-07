@@ -20,6 +20,8 @@ public class VRPlayer : MonoBehaviour
     [SerializeField, Range(1, 100)]
     float vibCutoff = 1f;
 
+    public bool canMove = false;
+
     [SerializeField]
     TextMeshPro TMP;
 
@@ -69,7 +71,7 @@ public class VRPlayer : MonoBehaviour
         float dist = vibCutoff + 1;
 
         foreach(GameObject i in fsPlayers) {
-            if (Vector3.Distance(transform.position, i.transform.position) < vibCutoff)
+            if ((Vector3.Distance(transform.position, i.transform.position) < vibCutoff) && canMove)
             {
                 dist = Vector3.Distance(transform.position, i.transform.position);
                 break;

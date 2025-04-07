@@ -15,7 +15,10 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        Process.Start("Assets/Nick/Audio/Cat And Mouse VR Audio Server.exe");
+        UnityEngine.Debug.Log(Application.dataPath);
+        //Process.Start(Application.dataPath + "/Nick/Audio/CAMVRAudio.exe");
+        Process.Start(Application.dataPath + "../../CAMVRAudio.exe");
+        //Process.Start("Assets/Nick/Audio/Cat And Mouse VR Audio Server.exe");
         try
         {
             client = new TcpClient("127.0.0.1", 12345);

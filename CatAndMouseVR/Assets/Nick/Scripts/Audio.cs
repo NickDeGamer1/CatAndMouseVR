@@ -16,8 +16,15 @@ public class TCPClient : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         UnityEngine.Debug.Log(Application.dataPath);
-        //Process.Start(Application.dataPath + "/Nick/Audio/CAMVRAudio.exe");
-        Process.Start(Application.dataPath + "../../CAMVRAudio.exe");
+        if (Application.isEditor)
+        {
+            Process.Start(Application.dataPath + "/Nick/Audio/CAMVRAudio.exe");
+        }
+        else
+        {
+            Process.Start(Application.dataPath + "../../CAMVRAudio.exe");
+        }
+
         //Process.Start("Assets/Nick/Audio/Cat And Mouse VR Audio Server.exe");
         try
         {

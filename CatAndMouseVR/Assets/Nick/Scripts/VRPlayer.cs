@@ -20,7 +20,8 @@ public class VRPlayer : MonoBehaviour
     [SerializeField, Range(1, 100)]
     float vibCutoff = 1f;
 
-    public bool canMove = false;
+    public bool isMove = false;
+    public Vector3 moveDir = new Vector3();
 
     [SerializeField]
     TextMeshPro TMP;
@@ -57,13 +58,16 @@ public class VRPlayer : MonoBehaviour
         float movement = (LeftHand.movementNum + RightHand.movementNum) / 2;
         if (movement > .01f)
         {
-
-            Vector3 moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
+            isMove = true;
+            moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
             moveDir = moveDir.normalized;
             moveDir = Vector3.Scale(moveDir, new Vector3(speed, 0, speed));
             cc.Move(moveDir);
         }
-
+        else
+        {
+            isMove = false;
+        }
 
         //SendHapticFeedback(1, Time.deltaTime);
         //SendHapticFeedback(1, Time.deltaTime);
@@ -71,7 +75,7 @@ public class VRPlayer : MonoBehaviour
         float dist = vibCutoff + 1;
 
         foreach(GameObject i in fsPlayers) {
-            if ((Vector3.Distance(transform.position, i.transform.position) < vibCutoff) && canMove)
+            if (Vector3.Distance(transform.position, i.transform.position) < vibCutoff)
             {
                 dist = Vector3.Distance(transform.position, i.transform.position);
                 break;

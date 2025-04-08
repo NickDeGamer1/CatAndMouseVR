@@ -43,6 +43,16 @@ public class TCPClient : MonoBehaviour
         byte[] message = Encoding.UTF8.GetBytes("PlayAudio:" + name);
         stream.Write(message, 0, message.Length);
     }
+    public void PlayAudioTVP(string name)
+    {
+        byte[] message = Encoding.UTF8.GetBytes("PlayAudioP:" + name);
+        stream.Write(message, 0, message.Length);
+    }
+    public void PlayAudioTVM(string name)
+    {
+        byte[] message = Encoding.UTF8.GetBytes("PlayMusic:" + name);
+        stream.Write(message, 0, message.Length);
+    }
 
     //private void Update()
     //{

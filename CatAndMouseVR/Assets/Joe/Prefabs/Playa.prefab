@@ -217,6 +217,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   animCreep: {fileID: 0}
   hasJumped: 0
+  catCams: {fileID: 0}
+  playaInput: {fileID: 8434016676693962687}
 --- !u!1 &5191286846152295857
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 //Adds the character controller automatically when the script is added
 [RequireComponent(typeof(CharacterController))]
@@ -46,20 +47,30 @@ public class c_CatController : MonoBehaviour
     public c_ctSt_Landed landedState = new c_ctSt_Landed();
     public c_ctSt_GettingUp gettingUpState = new c_ctSt_GettingUp();
 
+    //CAMERA
+    public c_CatCameras catCams;
+    
+    [SerializeField]
+    public PlayerInput playaInput;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = catModel.GetComponent<Animator>();
         animCreep = catCreepyModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
+        catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
+        playaInput = gameObject.GetComponent<PlayerInput>();
+
+        transform.position = new Vector3(0, 1, 2);
 
         jumpReset = 1.1f;
 
-        Debug.Log(c_PlayerManager.instance.catSpawnPoints[0].transform.position);
-        
-        transform.position = c_PlayerManager.instance.catSpawnPoints[0].transform.position;
-
         SwitchState(idleState);
+
+        catCams.catCams[playaInput.playerIndex] = playaInput.camera;
+
+        catCams.UpdateCams(playaInput.playerIndex);
     }
 
     public void OnMove(InputAction.CallbackContext context) 

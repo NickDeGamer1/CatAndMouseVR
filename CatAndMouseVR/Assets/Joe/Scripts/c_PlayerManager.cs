@@ -21,6 +21,8 @@ public class c_PlayerManager : MonoBehaviour
     // INSTANCES
     public static c_PlayerManager instance = null;
 
+    public c_CatCameras catCams;
+
     private void Awake()
     {
         if (instance == null)
@@ -50,8 +52,8 @@ public class c_PlayerManager : MonoBehaviour
     {
         playerList.Add(playerInput);
 
-        Transform playerParent = playerInput.transform.parent;
-        playerParent.position = catSpawnPoints[0].transform.position;
+        //Transform playerParent = playerInput.transform.parent;
+        //playerParent.position = catSpawnPoints[0].transform.position;
 
         if (PlayerJoinedGame != null)
         {

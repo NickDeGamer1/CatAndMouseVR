@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class c_catSkinController : MonoBehaviour
 {
-    public int catSkin = 0;
+    public int catSkin = 1;
 
     [SerializeField]
     Material[] headMat;

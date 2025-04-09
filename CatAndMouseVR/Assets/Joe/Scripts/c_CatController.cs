@@ -9,7 +9,6 @@ public class c_CatController : MonoBehaviour
 {
     //CAT MOVEMENT
     public Vector2 movementInput = Vector2.zero;
-    [SerializeField]
     public CharacterController controller;
     [SerializeField]
     private float playerSpeed = 3f;
@@ -53,6 +52,9 @@ public class c_CatController : MonoBehaviour
     [SerializeField]
     public PlayerInput playaInput;
 
+    [SerializeField]
+    public GameObject playerObject;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -60,9 +62,13 @@ public class c_CatController : MonoBehaviour
         animCreep = catCreepyModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
-        playaInput = gameObject.GetComponent<PlayerInput>();
 
-        transform.position = new Vector3(0, 1, 2);
+        var spawnPos = new Vector3(transform.position.x, 1f, 2f);
+        controller.enabled = false;
+        Instantiate(playerObject, spawnPos);
+        controller.enabled = true;
+
+
 
         jumpReset = 1.1f;
 

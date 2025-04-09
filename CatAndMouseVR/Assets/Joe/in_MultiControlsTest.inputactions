@@ -193,28 +193,6 @@
     ],
     "controlSchemes": [
         {
-            "name": "Keyboard A",
-            "bindingGroup": "Keyboard A",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": true,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Joystick",
-            "bindingGroup": "Joystick",
-            "devices": [
-                {
-                    "devicePath": "<Joystick>",
-                    "isOptional": true,
-                    "isOR": false
-                }
-            ]
-        },
-        {
             "name": "Controller1",
             "bindingGroup": "Controller1",
             "devices": [

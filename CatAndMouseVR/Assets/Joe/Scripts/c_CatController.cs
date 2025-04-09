@@ -63,10 +63,10 @@ public class c_CatController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
 
-        var spawnPos = new Vector3(transform.position.x, 1f, 2f);
-        controller.enabled = false;
-        Instantiate(playerObject, spawnPos);
-        controller.enabled = true;
+        //var spawnPos = new Vector3(transform.position.x, 1f, 2f);
+        //controller.enabled = false;
+        //Instantiate(playerObject, spawnPos);
+        //controller.enabled = true;
 
 
 

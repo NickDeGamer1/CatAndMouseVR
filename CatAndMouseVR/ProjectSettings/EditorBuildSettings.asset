@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nick/NickTestScene.unity
-    guid: 7153928c2d88dfd4182541c023e40e7f
+    path: Assets/Scenes/sc_mainMap.unity
+    guid: cce793d5fe8bf2f43bf6e08d4828d867
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 315a18a145bf2624d895e08c4d9fa5da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

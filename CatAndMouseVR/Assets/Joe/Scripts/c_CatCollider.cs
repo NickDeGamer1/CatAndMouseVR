@@ -7,8 +7,8 @@ public class c_CatCollider : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<MousePuppet>() != null && catAttatched.currentState == jumpState){
-            Debug.Log("CAT WIN!");
-        }
+        //if (other.gameObject.GetComponent<MousePuppet>() != null && catAttatched.currentState == jumpState){
+        //    Debug.Log("CAT WIN!");
+        //}
     }
 }

@@ -45,7 +45,7 @@ public class c_PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerInputManager.instance.JoinPlayer(1, 0, null);
+        PlayerInputManager.instance.JoinPlayer(0, 0, null);
     }
 
     void OnPlayerJoined(PlayerInput playerInput)

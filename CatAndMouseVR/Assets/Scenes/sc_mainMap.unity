@@ -8090,10 +8090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4699182484486204074, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
-      propertyPath: m_MaxPlayerCount
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -53,12 +53,12 @@ public class c_catSkinController : MonoBehaviour
     // Update is called once per frame
     public void SetSkin(int skinNum)
     {
-        cuteHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum-1], outlineMat[skinNum-1]};
-        cuteCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum-1], outlineMat[skinNum-1]};
-        cuteBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum-1], outlineMat[skinNum-1]};
+        cuteHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
+        cuteCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
+        cuteBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};
 
-        creepyHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyHeadMat[skinNum-1], creepyTeethMat, creepyEyeMat[skinNum-1]};
-        creepyCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyCollarMat[skinNum-1]};
-        creepyBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyBodyMat[skinNum-1]};
+        creepyHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyHeadMat[skinNum], creepyTeethMat, creepyEyeMat[skinNum]};
+        creepyCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyCollarMat[skinNum]};
+        creepyBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {creepyBodyMat[skinNum]};
     }
 }

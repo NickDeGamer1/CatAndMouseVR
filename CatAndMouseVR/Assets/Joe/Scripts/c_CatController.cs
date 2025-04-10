@@ -16,6 +16,8 @@ public class c_CatController : MonoBehaviour
     [SerializeField]
     private float playerRotate = 40f;
     [SerializeField]
+    public float jumpForce = 4f;
+    [SerializeField]
     public float SENSI = 0.5f;
     
     //GRAVITY AND SHIZZ
@@ -91,10 +93,10 @@ public class c_CatController : MonoBehaviour
         Vector3 playerForward = transform.forward;
         
         //jump
-        playerVelocity.y += Mathf.Sqrt(2f * -2.0f * gravityValue);
+        playerVelocity.y += Mathf.Sqrt(1f * -2.0f * gravityValue);
 
         //dash
-        playerVelocity += playerForward * (Mathf.Sqrt(8f * -2.0f * gravityValue));
+        playerVelocity += playerForward * (Mathf.Sqrt(jumpForce * -2.0f * gravityValue));
     }
 
     public void Move()

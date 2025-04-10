@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1910141840893440790}
-  - component: {fileID: 3321400545529779248}
-  - component: {fileID: 679448048825379342}
+  - component: {fileID: 7822075662233709551}
   - component: {fileID: 8434016676693962687}
   - component: {fileID: 7805191236790901484}
+  - component: {fileID: 3155983179955018616}
   m_Layer: 0
   m_Name: Playa
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 6243240196495638052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3321400545529779248
+--- !u!114 &7822075662233709551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,36 +99,6 @@ MonoBehaviour:
   creepyBodyObj: {fileID: 6484941187332046247}
   creepyCollarObj: {fileID: 4747139642897305341}
   playaInput: {fileID: 8434016676693962687}
---- !u!114 &679448048825379342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137861146124022983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e79dbaf9c5fbea44b7f340e2d3f986b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementInput: {x: 0, y: 0}
-  controller: {fileID: 0}
-  playerSpeed: 3
-  playerRotate: 40
-  SENSI: 0.5
-  playerVelocity: {x: 0, y: 0, z: 0}
-  groundedPlayer: 0
-  gravityValue: -9.81
-  jumpReset: 1.1
-  canJump: 1
-  catModel: {fileID: 3342884974816446727}
-  catCreepyModel: {fileID: 6768806121160287390}
-  anim: {fileID: 1695574140141299540}
-  animCreep: {fileID: 222217252584243872}
-  hasJumped: 0
-  catCams: {fileID: 0}
-  playaInput: {fileID: 8434016676693962687}
-  playerObject: {fileID: 2137861146124022983}
 --- !u!114 &8434016676693962687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +126,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3155983179955018616}
         m_TargetAssemblyTypeName: c_CatController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -172,7 +142,7 @@ MonoBehaviour:
     m_ActionName: 'Cat/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3155983179955018616}
         m_TargetAssemblyTypeName: c_CatController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -220,6 +190,35 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.3, z: 0}
+--- !u!114 &3155983179955018616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137861146124022983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e79dbaf9c5fbea44b7f340e2d3f986b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementInput: {x: 0, y: 0}
+  controller: {fileID: 7805191236790901484}
+  playerSpeed: 10
+  playerRotate: 200
+  SENSI: 0.5
+  playerVelocity: {x: 0, y: 0, z: 0}
+  groundedPlayer: 0
+  gravityValue: -9.81
+  jumpReset: 1.1
+  canJump: 1
+  catModel: {fileID: 3342884974816446727}
+  catCreepyModel: {fileID: 6768806121160287390}
+  anim: {fileID: 0}
+  animCreep: {fileID: 0}
+  hasJumped: 0
+  catCams: {fileID: 0}
+  playaInput: {fileID: 8434016676693962687}
 --- !u!1 &3152354006447821611
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409528894083850613}
   - component: {fileID: 2194372087650958523}
+  - component: {fileID: 4156918224179229340}
   - component: {fileID: 7197813187206833658}
   m_Layer: 0
   m_Name: Colider
@@ -298,6 +298,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4156918224179229340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152354006447821611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8dfa51d14406f4a99794df353d9a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catAttatched: {fileID: 3155983179955018616}
 --- !u!65 &7197813187206833658
 BoxCollider:
   m_ObjectHideFlags: 0

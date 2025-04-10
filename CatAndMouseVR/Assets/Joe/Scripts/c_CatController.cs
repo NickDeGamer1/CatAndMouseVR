@@ -49,9 +49,9 @@ public class c_CatController : MonoBehaviour
 
     //CAMERA
     public c_CatCameras catCams;
-    
     [SerializeField]
     public PlayerInput playaInput;
+    public c_PlayerManager playaManaga;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,15 +60,18 @@ public class c_CatController : MonoBehaviour
         animCreep = catCreepyModel.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
+        playaManaga = GameObject.Find("PlayerManager").GetComponent<c_PlayerManager>();
         playaInput = gameObject.GetComponent<PlayerInput>();
 
-        transform.position = new Vector3(0, 1, 2);
+        controller.enabled = false;
+        transform.position = playaManaga.catSpawnPoints[playaInput.playerIndex-1].transform.position;
+        controller.enabled = true;
 
         jumpReset = 1.1f;
 
         SwitchState(idleState);
 
-        catCams.catCams[playaInput.playerIndex] = playaInput.camera;
+        catCams.catCams[playaInput.playerIndex - 1] = playaInput.camera;
 
         catCams.UpdateCams(playaInput.playerIndex);
     }

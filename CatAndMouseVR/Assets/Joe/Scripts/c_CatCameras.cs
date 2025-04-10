@@ -8,6 +8,9 @@ public class c_CatCameras : MonoBehaviour
 
     public void UpdateCams(int catIndex)
     {
+
+        catIndex--;
+
         switch (catIndex){
 
         case 0:

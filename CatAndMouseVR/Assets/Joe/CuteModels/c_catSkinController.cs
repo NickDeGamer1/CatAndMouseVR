@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class c_catSkinController : MonoBehaviour
 {
-    public int catSkin = 0;
+    public int catSkin = 1;
 
     [SerializeField]
     Material[] headMat;
@@ -53,6 +53,8 @@ public class c_catSkinController : MonoBehaviour
     // Update is called once per frame
     public void SetSkin(int skinNum)
     {
+        skinNum--;
+
         cuteHeadObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {headMat[skinNum], outlineMat[skinNum]};
         cuteCollarObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {collarMat[skinNum], outlineMat[skinNum]};
         cuteBodyObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] {bodyMat[skinNum], outlineMat[skinNum]};

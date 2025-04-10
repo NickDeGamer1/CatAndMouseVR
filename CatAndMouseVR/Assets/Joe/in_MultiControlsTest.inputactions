@@ -90,6 +90,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "21247c6c-9d18-40e4-be0c-5a9ba15ddc2c",
+                    "path": "<HID::USB gamepad           >/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad3",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WASD",
                     "id": "219d501a-0739-423f-bc1f-2d56756ca1db",
                     "path": "2DVector",
@@ -179,11 +190,33 @@
                 },
                 {
                     "name": "",
+                    "id": "4ee57fc5-1af9-4390-8fba-97ee00e0fa9f",
+                    "path": "<HID::USB gamepad           >/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad3",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0c3de24e-c1d7-4f6a-a78d-c1148a08df7e",
                     "path": "<DualShockGamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller2",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e598c258-4cd2-4a0f-ad86-5e2654239140",
+                    "path": "<HID::USB gamepad           >/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad3",
                     "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -232,6 +265,17 @@
                 {
                     "devicePath": "<DualSenseGamepadHID>",
                     "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad3",
+            "bindingGroup": "Gamepad3",
+            "devices": [
+                {
+                    "devicePath": "<HID::USB gamepad           >",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

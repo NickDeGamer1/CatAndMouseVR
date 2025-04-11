@@ -3,8 +3,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.Rendering;
 using UnityEngine.XR;
 using UnityEngine.XR.OpenXR.Input;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class VRPlayer : MonoBehaviour
 {
@@ -19,6 +22,9 @@ public class VRPlayer : MonoBehaviour
     Camera head;
     [SerializeField, Range(1, 100)]
     float vibCutoff = 1f;
+    [SerializeField]
+    VolumeProfile vp;
+
 
     public bool isMove = false;
     public Vector3 moveDir = new Vector3();
@@ -37,6 +43,7 @@ public class VRPlayer : MonoBehaviour
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
 
+    private float FSReset = 1f;
 
     TCPClient audioserver;
 
@@ -50,6 +57,12 @@ public class VRPlayer : MonoBehaviour
 
 
         audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
+    }
+
+
+    public void FSPlayersUpdate()
+    {
+        fsPlayers = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -69,6 +82,13 @@ public class VRPlayer : MonoBehaviour
             isMove = false;
         }
 
+        FSReset -= Time.deltaTime;
+        if (FSReset < 0)
+        {
+            FSPlayersUpdate();
+            FSReset = 1;
+        }
+
         //SendHapticFeedback(1, Time.deltaTime);
         //SendHapticFeedback(1, Time.deltaTime);
 
@@ -85,7 +105,7 @@ public class VRPlayer : MonoBehaviour
         if (dist < vibCutoff)
         {
             float Strength = 1 - (dist / vibCutoff);
-            SendHapticFeedback(Strength, Time.deltaTime);
+            SendFeedback(Strength, Time.deltaTime);
         }
 
         if (TMP != null)
@@ -108,17 +128,17 @@ public class VRPlayer : MonoBehaviour
         //    SendHapticFeedback(1, Time.deltaTime);
         //}
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            audioserver.PlayAudioTV("BabaBoohey.wav");
-        }
-        else if (Input.GetKeyDown(KeyCode.N))
-        {
-            audioserver.PlayAudioTV("yohabaB.wav");
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    audioserver.PlayAudioTV("BabaBoohey.wav");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    audioserver.PlayAudioTV("yohabaB.wav");
+        //}
     }
 
-    void SendHapticFeedback(float amplitude, float duration)
+    void SendFeedback(float amplitude, float duration)
     {
         UnityEngine.XR.InputDevice LeftHand = InputDevices.GetDeviceAtXRNode(leftHand);
         UnityEngine.XR.InputDevice RightHand = InputDevices.GetDeviceAtXRNode(rightHand);
@@ -127,6 +147,8 @@ public class VRPlayer : MonoBehaviour
             LeftHand.SendHapticImpulse(0, amplitude, duration);
             RightHand.SendHapticImpulse(0,amplitude, duration);
         }
+
+        vp.
     }
 
     void OnVRLook(InputValue inv)

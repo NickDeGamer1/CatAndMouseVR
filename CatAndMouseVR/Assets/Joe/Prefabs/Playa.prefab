@@ -206,6 +206,7 @@ MonoBehaviour:
   controller: {fileID: 7805191236790901484}
   playerSpeed: 15
   playerRotate: 200
+  jumpForce: 4
   SENSI: 0.5
   playerVelocity: {x: 0, y: 0, z: 0}
   groundedPlayer: 0
@@ -425,7 +426,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191286846152295857}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &7854052154553250577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +934,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b497e857b4fefee4c8ffc8c5953e2622, type: 3}
       propertyPath: m_Name
       value: CreepyCatUnwrappedAnims
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b497e857b4fefee4c8ffc8c5953e2622, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: b497e857b4fefee4c8ffc8c5953e2622, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -147,8 +147,6 @@ public class VRPlayer : MonoBehaviour
             LeftHand.SendHapticImpulse(0, amplitude, duration);
             RightHand.SendHapticImpulse(0,amplitude, duration);
         }
-
-        vp.
     }
 
     void OnVRLook(InputValue inv)

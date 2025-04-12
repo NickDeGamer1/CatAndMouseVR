@@ -35,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 2679501593813750717}
   - {fileID: 6418597639151883696}
+  - {fileID: 1409528894083850613}
   - {fileID: 6243240196495638052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e79dbaf9c5fbea44b7f340e2d3f986b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioserver: {fileID: 0}
   movementInput: {x: 0, y: 0}
   controller: {fileID: 7805191236790901484}
   playerSpeed: 15
@@ -248,12 +250,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3152354006447821611}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.7, z: 1.05}
   m_LocalScale: {x: 1, y: 1.576, z: 1.9024}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2679501593813750717}
+  m_Father: {fileID: 1910141840893440790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2194372087650958523
 MeshRenderer:
@@ -803,10 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3e7569affaf09fb4d8d7ba4dbba23568, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 536582b6bae0fb242b3e177e6703916f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1409528894083850613}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 536582b6bae0fb242b3e177e6703916f, type: 3}
       insertIndex: -1

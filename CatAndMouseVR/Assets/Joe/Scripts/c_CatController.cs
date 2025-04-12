@@ -7,6 +7,10 @@ using System.Collections.Generic;
 
 public class c_CatController : MonoBehaviour
 {
+
+    //AUDIO
+    public TCPClient audioserver;
+
     //CAT MOVEMENT
     public Vector2 movementInput = Vector2.zero;
     [SerializeField]
@@ -38,7 +42,6 @@ public class c_CatController : MonoBehaviour
     public Animator animCreep;
 
     //POUNCING
-    private int jumpStage = 0; // 0 = not pouncing; 1 = readying to pounce; 2 = pouncing; 3 = getting back up;
     public bool hasJumped = false;
 
     //STATES
@@ -58,12 +61,20 @@ public class c_CatController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Cute Cat Animator
         anim = catModel.GetComponent<Animator>();
+        //Creepy Cat Animator
         animCreep = catCreepyModel.GetComponent<Animator>();
+        //Character Controller
         controller = gameObject.GetComponent<CharacterController>();
+        //The camera controller
         catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
+        //The player manager
         playaManaga = GameObject.Find("PlayerManager").GetComponent<c_PlayerManager>();
+        //PlayerInput
         playaInput = gameObject.GetComponent<PlayerInput>();
+        //Audio
+        audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
 
         controller.enabled = false;
         transform.position = playaManaga.catSpawnPoints[playaInput.playerIndex-1].transform.position;
@@ -97,6 +108,9 @@ public class c_CatController : MonoBehaviour
 
         //dash
         playerVelocity += playerForward * (Mathf.Sqrt(jumpForce * -2.0f * gravityValue));
+
+        //play Cat noise
+        //audioserver.PlayAudioTV("BabaBoohey.wav");
     }
 
     public void Move()
@@ -162,5 +176,10 @@ public class c_CatController : MonoBehaviour
         currentState = newState;
 
         currentState.EnterState(this);
+    }
+
+    public c_ctSt_Class GetState()
+    {
+        return currentState;
     }
 }

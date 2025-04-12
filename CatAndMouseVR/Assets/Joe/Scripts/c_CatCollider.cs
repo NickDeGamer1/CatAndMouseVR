@@ -4,11 +4,14 @@ public class c_CatCollider : MonoBehaviour
 {
 
     public c_CatController catAttatched;
+    //private c_ctSt_Class catState;
 
     void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.GetComponent<MousePuppet>() != null && catAttatched.currentState == jumpState){
-        //    Debug.Log("CAT WIN!");
-        //}
+        //catState = catAttatched.GetState();
+
+        if (other.gameObject.tag == "MousePuppet"){
+            Debug.Log("WIN!");
+        }
     }
 }

@@ -233,6 +233,7 @@ MonoBehaviour:
   RightHandObject: {fileID: 1966218972274514372}
   head: {fileID: 1230754829393518140}
   vibCutoff: 30
+  vp: {fileID: 0}
   isMove: 0
   moveDir: {x: 0, y: 0, z: 0}
   TMP: {fileID: 0}
@@ -527,6 +528,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4881352633322379295, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7169921602134226473}
+    - targetCorrespondingSourceObject: {fileID: 4881352633322379295, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119940219013800291}
   m_SourcePrefab: {fileID: 100100000, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
 --- !u!4 &4111536643891963356 stripped
 Transform:
@@ -551,6 +555,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cam: {fileID: 8963918848154875567}
+--- !u!65 &2119940219013800291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562432817365577981}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.63, y: 0.52, z: 1}
+  m_Center: {x: 0, y: 0.21, z: 0}
 --- !u!1001 &4845413234742506182
 PrefabInstance:
   m_ObjectHideFlags: 0

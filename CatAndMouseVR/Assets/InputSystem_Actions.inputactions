@@ -1008,11 +1008,11 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "80bc931d-fb75-4a7b-8990-3997d35af2ad",
-                    "path": "<XRController>{RightHand}/thumbstick",
+                    "id": "584c94e3-1535-4bff-813c-513b719ee138",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";XR",
+                    "groups": "",
                     "action": "VRLook",
                     "isComposite": false,
                     "isPartOfComposite": false

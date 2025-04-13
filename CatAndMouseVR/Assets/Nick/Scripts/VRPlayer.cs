@@ -63,6 +63,7 @@ public class VRPlayer : MonoBehaviour
     public void FSPlayersUpdate()
     {
         fsPlayers = GameObject.FindGameObjectsWithTag("Player");
+        gameObject.GetComponent<PlayerInput>().ActivateInput();
     }
 
     // Update is called once per frame
@@ -149,7 +150,7 @@ public class VRPlayer : MonoBehaviour
         }
     }
 
-    void OnVRLook(InputValue inv)
+    public void OnVRLook(InputValue inv)
     {
         transform.Rotate(0, inv.Get<Vector2>().x, 0);
     }

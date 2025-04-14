@@ -8,6 +8,9 @@ public class c_PlayerManager : MonoBehaviour
 
     public GameObject[] mouseSpawnPoints;
 
+    public GameObject vrPrefab;
+    public GameObject catPrefab;
+
     public List<PlayerInput> playerList = new List<PlayerInput>();
 
     [SerializeField]
@@ -45,7 +48,9 @@ public class c_PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerInputManager.instance.JoinPlayer(0, 0, null);
+        PlayerInputManager.instance.playerPrefab = vrPrefab;
+        PlayerInputManager.instance.JoinPlayer(0, -5, null);
+        PlayerInputManager.instance.playerPrefab = catPrefab;
     }
 
     void OnPlayerJoined(PlayerInput playerInput)

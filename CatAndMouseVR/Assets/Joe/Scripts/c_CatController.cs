@@ -52,12 +52,17 @@ public class c_CatController : MonoBehaviour
     public c_ctSt_Jump jumpState = new c_ctSt_Jump();
     public c_ctSt_Landed landedState = new c_ctSt_Landed();
     public c_ctSt_GettingUp gettingUpState = new c_ctSt_GettingUp();
+    public c_ctSt_Start startState = new c_ctSt_Start();
 
     //CAMERA
     public c_CatCameras catCams;
     [SerializeField]
     public PlayerInput playaInput;
     public c_PlayerManager playaManaga;
+
+    //Management
+    public bool hasStarted = false;
+    public c_GameManager gameManaga;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,14 +81,39 @@ public class c_CatController : MonoBehaviour
         playaInput = gameObject.GetComponent<PlayerInput>();
         //Audio
         audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
+        //The game controller
+        gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
 
         controller.enabled = false;
-        transform.position = playaManaga.catSpawnPoints[playaInput.playerIndex-1].transform.position;
+        transform.position = GameObject.Find("CatSpawnPoint " + playaInput.playerIndex).transform.position;
         controller.enabled = true;
+
+        //StartCams
+        switch (playaInput.playerIndex -1){
+        
+        case 0:
+
+            gameManaga.roundStartCams[0].enabled = true;
+            break;
+
+        case 1:
+            gameManaga.roundStartCams[1].enabled = true;
+            gameManaga.roundStartCams[1].rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+            break;
+
+        case 2:
+            gameManaga.roundStartCams[2].enabled = true;
+            gameManaga.roundStartCams[1].rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            break;
+
+        case 3:
+            gameManaga.roundStartCams[3].enabled = true;
+            break;
+        }
 
         jumpReset = 1.1f;
 
-        SwitchState(idleState);
+        SwitchState(startState);
 
         catCams.catCams[playaInput.playerIndex - 1] = playaInput.camera;
 
@@ -102,6 +132,10 @@ public class c_CatController : MonoBehaviour
     public void OnTurn(InputAction.CallbackContext context)
     {
         turnInput = context.ReadValue<Vector2>();
+    }
+    public void OnStart(InputAction.CallbackContext context)
+    {
+        gameManaga.StartGame();
     }
 
     public void JumpStart()
@@ -169,6 +203,7 @@ public class c_CatController : MonoBehaviour
         if (((SENSI < turnInput.x) || ((-1 * SENSI) > turnInput.x)) && (currentState != jumpState) && (currentState != landedState)){
             transform.Rotate(transform.up, playerRotate * turnInput.x * Time.deltaTime);
         }
+
     }
 
     public void JumpCountDown()

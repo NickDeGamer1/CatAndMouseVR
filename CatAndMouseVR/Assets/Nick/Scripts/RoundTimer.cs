@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoundTimer : MonoBehaviour
 {
-    bool active = true;
+    bool active = false;
 
     [SerializeField]
     float time;
@@ -17,6 +17,15 @@ public class RoundTimer : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void StartTimer()
+    {
+        active = true;
+    }
+    public void PauseTimer()
+    {
+        active = false;
     }
 
     // Update is called once per frame

@@ -143,28 +143,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
-                    "id": "dc4b1902-d6ae-49e4-89c0-d3577dcea56a",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard A",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "753a4e13-e290-4b37-9730-d8f64b52ffc5",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard A",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "be2ee21f-c5f3-4cff-aa6c-a2f8e5339c62",
                     "path": "<Joystick>/stick",
@@ -218,28 +196,6 @@
                     "action": "Turn",
                     "isComposite": true,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "a39fb8a9-d7ab-4178-889c-20e01be72ec1",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard A",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "0a36237a-6235-41a7-b987-53db7c2e2bb6",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard A",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "left",
@@ -310,7 +266,7 @@
                 {
                     "name": "",
                     "id": "0c3de24e-c1d7-4f6a-a78d-c1148a08df7e",
-                    "path": "<DualShockGamepad>/start",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller2",
@@ -325,6 +281,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad3",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e41f01bf-528e-4d8c-8852-9987408f0900",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller1",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "776158a0-0c95-482a-b022-4d224d627f8f",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard A",
                     "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false

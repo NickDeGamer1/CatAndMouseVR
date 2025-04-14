@@ -9,6 +9,7 @@ TagManager:
   - CatSpawnPoint
   - MouseSpawnPoint
   - MousePuppet
+  - PlayerPrefab
   layers:
   - Default
   - TransparentFX

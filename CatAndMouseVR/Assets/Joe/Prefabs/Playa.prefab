@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3155983179955018616}
   m_Layer: 0
   m_Name: Playa
-  m_TagString: Untagged
+  m_TagString: PlayerPrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,19 @@ MonoBehaviour:
     m_ActionId: cc43e2ce-ba97-4bac-aa82-ab642f9624b8
     m_ActionName: 'Cat/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3155983179955018616}
+        m_TargetAssemblyTypeName: c_CatController, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a292fbb8-7528-4195-8836-62d3a603d2dd
     m_ActionName: 'Cat/Start[/DualSenseGamepadHID/start]'
   - m_PersistentCalls:
@@ -240,6 +252,8 @@ MonoBehaviour:
   catCams: {fileID: 0}
   playaInput: {fileID: 8434016676693962687}
   playaManaga: {fileID: 0}
+  hasStarted: 0
+  gameManaga: {fileID: 0}
 --- !u!1 &3152354006447821611
 GameObject:
   m_ObjectHideFlags: 0

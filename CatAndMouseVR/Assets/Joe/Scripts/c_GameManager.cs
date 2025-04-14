@@ -11,6 +11,11 @@ public class c_GameManager : MonoBehaviour
     {
         roundTimer = GameObject.Find("RoundTimer").GetComponent<RoundTimer>();
 
+        StartGame();
+    }
+
+    void StartGame()
+    {
         roundTimer.StartTimer();
     }
 

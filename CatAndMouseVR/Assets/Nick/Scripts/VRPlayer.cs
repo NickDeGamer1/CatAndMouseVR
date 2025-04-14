@@ -44,7 +44,6 @@ public class VRPlayer : MonoBehaviour
     private CharacterController cc;
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
-
     private float FSReset = 1f;
 
     TCPClient audioserver;
@@ -92,6 +91,17 @@ public class VRPlayer : MonoBehaviour
             FSReset = 1;
         }
 
+        UnityEngine.XR.InputDevice device = InputDevices.GetDeviceAtXRNode(rightHand);
+
+        if (device.isValid)
+        {
+            if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out Vector2 primary2DAxisValue))
+            {
+                //Debug.Log(primary2DAxisValue.ToString());
+                LookVR(primary2DAxisValue.x);
+            }
+        }
+
         //SendHapticFeedback(1, Time.deltaTime);
         //SendHapticFeedback(1, Time.deltaTime);
 
@@ -129,8 +139,8 @@ public class VRPlayer : MonoBehaviour
     }
 
 
-    public void OnVRLook(InputValue inv)
+    public void LookVR(float movex)
     {
-        transform.Rotate(0, inv.Get<Vector2>().x, 0);
+        transform.Rotate(0, movex * 1.5f, 0);
     }
 }

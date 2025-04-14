@@ -13,12 +13,13 @@ public class c_CatController : MonoBehaviour
 
     //CAT MOVEMENT
     public Vector2 movementInput = Vector2.zero;
+    public Vector2 turnInput = Vector2.zero;
     [SerializeField]
     public CharacterController controller;
     [SerializeField]
-    private float playerSpeed = 3f;
+    private float playerSpeed = 15f;
     [SerializeField]
-    private float playerRotate = 40f;
+    private float playerRotate = 100f;
     [SerializeField]
     public float jumpForce = 4f;
     [SerializeField]
@@ -98,6 +99,10 @@ public class c_CatController : MonoBehaviour
     {
         hasJumped = context.action.triggered;
     }
+    public void OnTurn(InputAction.CallbackContext context)
+    {
+        turnInput = context.ReadValue<Vector2>();
+    }
 
     public void JumpStart()
     {
@@ -118,11 +123,6 @@ public class c_CatController : MonoBehaviour
         //moving and shizz
         if ((SENSI < movementInput.y) || ((-1 * SENSI) > movementInput.y)){
             controller.Move(transform.forward * movementInput.y * playerSpeed * Time.deltaTime);
-        }
-
-        //ROTATING AND SHIZZ WE SO UP RN (RIGHT NOW)!!!!
-        if ((SENSI < movementInput.x) || ((-1 * SENSI) > movementInput.x)){
-            transform.Rotate(transform.up, playerRotate * movementInput.x * Time.deltaTime);
         }
     }
 
@@ -163,6 +163,11 @@ public class c_CatController : MonoBehaviour
             canJump = true;
             timerActive = false;
             jumpReset = 1.1f;
+        }
+
+        //ROTATING AND SHIZZ WE SO UP RN (RIGHT NOW)!!!!
+        if (((SENSI < turnInput.x) || ((-1 * SENSI) > turnInput.x)) && (currentState != jumpState) && (currentState != landedState)){
+            transform.Rotate(transform.up, playerRotate * turnInput.x * Time.deltaTime);
         }
     }
 

@@ -345,7 +345,7 @@ MonoBehaviour:
     m_ActionName: VRPlayer/VRLook
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!143 &3317276262095675727
@@ -580,6 +580,10 @@ PrefabInstance:
     - target: {fileID: 4881352633322379295, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
       propertyPath: m_Name
       value: Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881352633322379295, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
+      propertyPath: m_TagString
+      value: MousePuppet
       objectReference: {fileID: 0}
     - target: {fileID: 7261673025433839129, guid: 31ddb678b9ea431449c21f8241bf766d, type: 3}
       propertyPath: m_LocalPosition.x

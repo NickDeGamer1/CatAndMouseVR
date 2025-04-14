@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEngine.XR;
 
 public class c_PlayerManager : MonoBehaviour
 {
@@ -48,9 +49,11 @@ public class c_PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerInputManager.instance.playerPrefab = vrPrefab;
-        PlayerInputManager.instance.JoinPlayer(0, -5, null);
-        PlayerInputManager.instance.playerPrefab = catPrefab;
+        //PlayerInputManager.instance.JoinPlayer(0, 0, null);
+
+        //PlayerInputManager.instance.playerPrefab = vrPrefab;
+        //PlayerInputManager.instance.JoinPlayer(0, -5, null);// "XR");
+        //PlayerInputManager.instance.playerPrefab = catPrefab;
     }
 
     void OnPlayerJoined(PlayerInput playerInput)

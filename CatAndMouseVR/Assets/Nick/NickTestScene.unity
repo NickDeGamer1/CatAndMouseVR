@@ -616,8 +616,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6723085308931856319, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: c7f090d4-08a2-4371-b69d-a8e11aae97b1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723085308931856319, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: XR
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6723085308931856319, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_NotificationBehavior
@@ -625,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6723085308931856319, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474787160090437783, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_Name

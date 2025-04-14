@@ -8,6 +8,8 @@ using UnityEngine.XR;
 using UnityEngine.XR.OpenXR.Input;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 
 public class VRPlayer : MonoBehaviour
 {
@@ -113,28 +115,6 @@ public class VRPlayer : MonoBehaviour
         {
             TMP.text = dist.ToString();
         }
-
-        //if (dist < vibCutoff && dist >= (vibCutoff * .6666))
-        //{
-        //    SendHapticFeedback(0.33f, Time.deltaTime);
-        //}
-        //else if (dist < (vibCutoff * .6666) && dist >= (vibCutoff * .3333))
-        //{
-        //    SendHapticFeedback(0.66f, Time.deltaTime);
-        //}
-        //else if (dist < (vibCutoff * .3333))
-        //{
-        //    SendHapticFeedback(1, Time.deltaTime);
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    audioserver.PlayAudioTV("BabaBoohey.wav");
-        //}
-        //else if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    audioserver.PlayAudioTV("yohabaB.wav");
-        //}
     }
 
     void SendFeedback(float amplitude, float duration)
@@ -149,8 +129,8 @@ public class VRPlayer : MonoBehaviour
     }
 
 
-    //public void OnVRLook(InputValue inv)
-    //{
-    //    transform.Rotate(0, inv.Get<Vector2>().x, 0);
-    //}
+    public void OnVRLook(InputValue inv)
+    {
+        transform.Rotate(0, inv.Get<Vector2>().x, 0);
+    }
 }

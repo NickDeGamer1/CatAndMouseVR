@@ -15,7 +15,7 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        UnityEngine.Debug.Log(Application.dataPath);
+        //UnityEngine.Debug.Log(Application.dataPath);
         if (Application.isEditor)
         {
             Process.Start(Application.dataPath + "/Nick/Audio/CAMVRAudio.exe");

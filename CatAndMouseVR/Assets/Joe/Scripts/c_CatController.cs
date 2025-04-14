@@ -94,20 +94,26 @@ public class c_CatController : MonoBehaviour
         case 0:
 
             gameManaga.roundStartCams[0].enabled = true;
+            gameManaga.catNames[0].text = "Steve";
             break;
 
         case 1:
             gameManaga.roundStartCams[1].enabled = true;
             gameManaga.roundStartCams[1].rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+            gameManaga.catNames[3].text = "Blue";
             break;
 
         case 2:
             gameManaga.roundStartCams[2].enabled = true;
             gameManaga.roundStartCams[1].rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            gameManaga.catNames[1].text = "Blue";
+            gameManaga.catNames[2].text = "Clarisse";
+            gameManaga.catNames[3].text = "";
             break;
 
         case 3:
             gameManaga.roundStartCams[3].enabled = true;
+            gameManaga.catNames[3].text = "Ed";
             break;
         }
 
@@ -135,7 +141,13 @@ public class c_CatController : MonoBehaviour
     }
     public void OnStart(InputAction.CallbackContext context)
     {
-        gameManaga.StartGame();
+        if (currentState == startState)
+        {
+            //int minPlayerCheck = GameObject.FindGameObjectWithTag("PlayerPrefab").GetComponent<PlayerInput>().playerIndex;
+            //if (minPlayerCheck != null){
+                gameManaga.StartGame();
+            //}
+        }
     }
 
     public void JumpStart()

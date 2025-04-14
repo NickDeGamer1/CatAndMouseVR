@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 using UnityEngine.UI;
 
 public class c_GameManager : MonoBehaviour
@@ -18,6 +18,8 @@ public class c_GameManager : MonoBehaviour
     [SerializeField]
     private Color darkerColor; //828282
     public GameObject[] cats;
+    [SerializeField]
+    public TextMeshProUGUI[] catNames;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,6 +29,16 @@ public class c_GameManager : MonoBehaviour
         roundStartCams[1].enabled = false;
         roundStartCams[2].enabled = false;
         roundStartCams[3].enabled = false;
+
+        catNames[0] = GameObject.Find("Name1").GetComponent<TextMeshProUGUI>();
+        catNames[1] = GameObject.Find("Name2").GetComponent<TextMeshProUGUI>();
+        catNames[2] = GameObject.Find("Name3").GetComponent<TextMeshProUGUI>();
+        catNames[3] = GameObject.Find("Name4").GetComponent<TextMeshProUGUI>();
+
+        catNames[0].text = "";
+        catNames[1].text = "";
+        catNames[2].text = "";
+        catNames[3].text = "";
 
         roundTimer = GameObject.Find("RoundTimer").GetComponent<RoundTimer>();
 
@@ -39,8 +51,13 @@ public class c_GameManager : MonoBehaviour
         roundStartCams[1].enabled = false;
         roundStartCams[2].enabled = false;
         roundStartCams[3].enabled = false;
+
+        catNames[0].text = "";
+        catNames[1].text = "";
+        catNames[2].text = "";
+        catNames[3].text = "";
         
-        bkgImg.CrossFadeColor(darkerColor, 2, true, false);
+        bkgImg.CrossFadeColor(darkerColor, 4, true, false);
 
         pressStartText[0].SetActive(false);
         pressStartText[1].SetActive(false);

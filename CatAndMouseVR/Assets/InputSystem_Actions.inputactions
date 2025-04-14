@@ -1012,7 +1012,7 @@
                     "path": "<XRController>{RightHand}/primary2DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";XR",
                     "action": "VRLook",
                     "isComposite": false,
                     "isPartOfComposite": false

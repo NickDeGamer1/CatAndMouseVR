@@ -114,8 +114,6 @@ public class VRPlayer : MonoBehaviour
             TMP.text = dist.ToString();
         }
 
-
-
         //if (dist < vibCutoff && dist >= (vibCutoff * .6666))
         //{
         //    SendHapticFeedback(0.33f, Time.deltaTime);
@@ -150,8 +148,9 @@ public class VRPlayer : MonoBehaviour
         }
     }
 
-    public void OnVRLook(InputValue inv)
-    {
-        transform.Rotate(0, inv.Get<Vector2>().x, 0);
-    }
+
+    //public void OnVRLook(InputValue inv)
+    //{
+    //    transform.Rotate(0, inv.Get<Vector2>().x, 0);
+    //}
 }

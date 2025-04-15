@@ -15,6 +15,8 @@ public class MousePuppet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Cat's win!");
+        if (other.gameObject.GetComponent<c_CatController>() != null){
+            other.gameObject.GetComponent<c_CatController>().CatCatch();
+        }
     }
 }

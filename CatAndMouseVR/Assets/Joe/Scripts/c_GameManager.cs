@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class c_GameManager : MonoBehaviour
 {
@@ -20,15 +21,32 @@ public class c_GameManager : MonoBehaviour
     public GameObject[] cats;
     [SerializeField]
     public TextMeshProUGUI[] catNames;
+    [SerializeField]
+    private GameObject timerText;
+    [SerializeField]
+    private GameObject timerBox;
+    [SerializeField]
+    private GameObject dividers;
+    [SerializeField]
+    private GameObject controlsBox;
+
+    [SerializeField]
+    private GameObject catWinPopup;
+    private Animator catWinAnim;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        catWinAnim = catWinPopup.GetComponent<Animator>();
+
         roundStartCams[0].enabled = false;
         roundStartCams[1].enabled = false;
         roundStartCams[2].enabled = false;
         roundStartCams[3].enabled = false;
+
+        timerText.SetActive(false);
+        catWinPopup.SetActive(false);
 
         catNames[0] = GameObject.Find("Name1").GetComponent<TextMeshProUGUI>();
         catNames[1] = GameObject.Find("Name2").GetComponent<TextMeshProUGUI>();
@@ -51,6 +69,10 @@ public class c_GameManager : MonoBehaviour
         roundStartCams[1].enabled = false;
         roundStartCams[2].enabled = false;
         roundStartCams[3].enabled = false;
+
+        timerText.SetActive(true);
+
+        controlsBox.SetActive(false);
 
         catNames[0].text = "";
         catNames[1].text = "";
@@ -75,6 +97,23 @@ public class c_GameManager : MonoBehaviour
         }
 
         roundTimer.StartTimer();
+    }
+
+    public void WinGame(GameObject catID)
+    {
+        timerText.SetActive(false);
+        timerBox.SetActive(false);
+        dividers.SetActive(false);
+        roundTimer.PauseTimer();
+
+        //The camera controller
+        c_CatCameras catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
+
+        //Set cat that won to full screeen
+        catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
+
+        catWinAnim.SetTrigger("gettingUp");
+
     }
 
     // Update is called once per frame

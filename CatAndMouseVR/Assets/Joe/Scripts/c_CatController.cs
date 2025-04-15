@@ -234,4 +234,9 @@ public class c_CatController : MonoBehaviour
     {
         return currentState;
     }
+
+    public void CatCatch()
+    {
+        gameManaga.WinGame(gameObject);
+    }
 }

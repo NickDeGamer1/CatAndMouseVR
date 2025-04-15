@@ -112,7 +112,7 @@ public class c_GameManager : MonoBehaviour
         //Set cat that won to full screeen
         catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
 
-        catWinAnim.SetTrigger("gettingUp");
+        catWinAnim.SetTrigger("CatWin");
 
     }
 

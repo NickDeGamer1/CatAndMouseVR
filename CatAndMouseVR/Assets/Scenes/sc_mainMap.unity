@@ -1923,6 +1923,7 @@ MonoBehaviour:
   dividers: {fileID: 237206324}
   controlsBox: {fileID: 1977058264}
   catWinPopup: {fileID: 1534526766}
+  popupText: {fileID: 897812876}
 --- !u!4 &699699025
 Transform:
   m_ObjectHideFlags: 0

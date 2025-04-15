@@ -32,6 +32,8 @@ public class c_GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject catWinPopup;
+    [SerializeField]
+    private TextMeshProUGUI popupText;
     private Animator catWinAnim;
 
     private float gameEndingTimer = 4f;
@@ -103,21 +105,36 @@ public class c_GameManager : MonoBehaviour
 
     public void WinGame(GameObject catID)
     {
-        timerText.SetActive(false);
-        timerBox.SetActive(false);
-        dividers.SetActive(false);
-        roundTimer.PauseTimer();
+        if (!gameEnding){
+            timerText.SetActive(false);
+            timerBox.SetActive(false);
+            dividers.SetActive(false);
+            roundTimer.PauseTimer();
 
-        //The camera controller
-        c_CatCameras catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
+            //The camera controller
+            c_CatCameras catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
 
-        //Set cat that won to full screeen
-        catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
-    
-        catWinAnim.SetTrigger("CatWin");
+            //Set cat that won to full screeen
+            catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
+        
+            catWinAnim.SetTrigger("CatWin");
 
-        gameEnding = true;
+            gameEnding = true;
+        }
 
+    }
+    public void LoseGame()
+    {
+        if (!gameEnding){
+            gameEnding = true;
+            timerText.SetActive(false);
+            timerBox.SetActive(false);
+            roundTimer.PauseTimer();
+
+            popupText.fontSize = 162;
+            popupText.text = "MOUSE WINS!!";
+            catWinAnim.SetTrigger("CatWin");
+        }
     }
 
     // Update is called once per frame

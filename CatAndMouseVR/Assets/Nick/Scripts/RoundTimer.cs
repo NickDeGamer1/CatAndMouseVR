@@ -13,10 +13,12 @@ public class RoundTimer : MonoBehaviour
 
     public TextMeshProUGUI tmpro;
 
+    private c_GameManager gameManaga;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
     }
 
     public void StartTimer()
@@ -44,6 +46,8 @@ public class RoundTimer : MonoBehaviour
             {
                 active = false;
                 Debug.Log("Mouse Wins!");
+                gameManaga.LoseGame();
+
                 //change scene to win
             }
         }

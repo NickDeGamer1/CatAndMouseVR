@@ -34,6 +34,9 @@ public class c_GameManager : MonoBehaviour
     private GameObject catWinPopup;
     private Animator catWinAnim;
 
+    private float gameEndingTimer = 4f;
+    private bool gameEnding = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,7 +49,6 @@ public class c_GameManager : MonoBehaviour
         roundStartCams[3].enabled = false;
 
         timerText.SetActive(false);
-        catWinPopup.SetActive(false);
 
         catNames[0] = GameObject.Find("Name1").GetComponent<TextMeshProUGUI>();
         catNames[1] = GameObject.Find("Name2").GetComponent<TextMeshProUGUI>();
@@ -111,14 +113,25 @@ public class c_GameManager : MonoBehaviour
 
         //Set cat that won to full screeen
         catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
-
+    
         catWinAnim.SetTrigger("CatWin");
+
+        gameEnding = true;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (gameEnding){
+            gameEndingTimer -= Time.deltaTime;
+        }
+        
+        if (gameEndingTimer <= 0){
+
+            //SceneManager.LoadScene(SceneManager.GetActiveScene());
+        }
         
     }
 }

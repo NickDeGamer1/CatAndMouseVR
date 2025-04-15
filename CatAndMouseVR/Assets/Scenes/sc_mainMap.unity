@@ -176,6 +176,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1872d651e232cf04b942db4d8f918bd7, type: 3}
+--- !u!1 &48089434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 48089435}
+  m_Layer: 0
+  m_Name: CheeseSpawn (6)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &48089435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48089434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2, y: 0, z: 47.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &89669170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,7 +487,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &222837490
+=======
+--- !u!1 &212467963
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,16 +499,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 222837491}
   - component: {fileID: 222837493}
   - component: {fileID: 222837492}
   m_Layer: 5
   m_Name: RawImage (4)
+=======
+  - component: {fileID: 212467964}
+  m_Layer: 0
+  m_Name: CheeseSpawn (0)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &212467964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212467963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.28, y: 0, z: -1.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &272250999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272251001}
+  - component: {fileID: 272251000}
+  m_Layer: 0
+  m_Name: CheeseManager
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &222837491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -494,11 +568,15 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222837492
+=======
+--- !u!114 &272251000
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 222837490}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -522,10 +600,22 @@ MonoBehaviour:
     height: 1
 --- !u!222 &222837493
 CanvasRenderer:
+=======
+  m_GameObject: {fileID: 272250999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d026c7c5a5b6a4eb3773ed0147573e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheesePrefab: {fileID: 4529469471735672431, guid: 2f7fda59ab7adbb4a990abafb661fd09, type: 3}
+--- !u!4 &272251001
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 222837490}
   m_CullTransparentMesh: 1
 --- !u!1 &237206324
@@ -701,6 +791,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301710145}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 272250999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.8681865, y: -24, z: -6.9520683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 212467964}
+  - {fileID: 914081275}
+  - {fileID: 1430952678}
+  - {fileID: 967906193}
+  - {fileID: 2049443959}
+  - {fileID: 1001066290}
+  - {fileID: 48089435}
+  - {fileID: 787330814}
+  - {fileID: 1867895521}
+  - {fileID: 801296810}
+  - {fileID: 1286346253}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &351564907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b61bf601bd06d438af93db0bed3e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTimer: {fileID: 0}
+  roundTimer: {fileID: 1407001078}
   roundStartCams:
   - {fileID: 834525361}
   - {fileID: 1581403649}
@@ -2080,6 +2192,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745170523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745170524}
+  m_Layer: 0
+  m_Name: VRSpawn (2)
+  m_TagString: MouseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &745170524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745170523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.37, y: 0.04, z: -3.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1581278568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &755766741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2137,6 +2280,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1872d651e232cf04b942db4d8f918bd7, type: 3}
+--- !u!1 &787330813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787330814}
+  m_Layer: 0
+  m_Name: CheeseSpawn (7)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787330814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787330813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2, y: 0, z: 27.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788740393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2447,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &801296809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801296810}
+  m_Layer: 0
+  m_Name: CheeseSpawn (9)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801296810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801296809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.46, y: 0, z: 27.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832322265
 GameObject:
@@ -2684,7 +2889,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -1.334, y: 180, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &897812874
+=======
+--- !u!1 &914081274
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2692,22 +2901,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 897812875}
   - component: {fileID: 897812877}
   - component: {fileID: 897812876}
   m_Layer: 5
   m_Name: CatWin
   m_TagString: Untagged
+=======
+  - component: {fileID: 914081275}
+  m_Layer: 0
+  m_Name: CheeseSpawn (1)
+  m_TagString: CheeseSpawnPoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &897812875
 RectTransform:
+=======
+--- !u!4 &914081275
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 897812874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2821,6 +3043,18 @@ CanvasRenderer:
   m_GameObject: {fileID: 897812874}
   m_CullTransparentMesh: 1
 --- !u!1 &911936530
+=======
+  m_GameObject: {fileID: 914081274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.13, y: 0, z: -1.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967906192
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2828,22 +3062,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 911936531}
   - component: {fileID: 911936533}
   - component: {fileID: 911936532}
   m_Layer: 5
   m_Name: RawImage (4)
   m_TagString: Untagged
+=======
+  - component: {fileID: 967906193}
+  m_Layer: 0
+  m_Name: CheeseSpawn (3)
+  m_TagString: CheeseSpawnPoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &911936531
 RectTransform:
+=======
+--- !u!4 &967906193
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 911936530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2892,6 +3139,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911936530}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 967906192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.32, y: 0, z: 16.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &969793974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +3374,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982944060}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1072569276
+=======
+--- !u!1 &1001066289
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3124,22 +3386,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1072569277}
   - component: {fileID: 1072569279}
   - component: {fileID: 1072569278}
   m_Layer: 5
   m_Name: RawImage (1)
   m_TagString: Untagged
+=======
+  - component: {fileID: 1001066290}
+  m_Layer: 0
+  m_Name: CheeseSpawn (5)
+  m_TagString: CheeseSpawnPoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &1072569277
 RectTransform:
+=======
+--- !u!4 &1001066290
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1072569276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3155,10 +3430,24 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072569278
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 1001066289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.59, y: 0, z: 47.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1081927863
+GameObject:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1072569276}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3182,12 +3471,38 @@ MonoBehaviour:
     height: 1
 --- !u!222 &1072569279
 CanvasRenderer:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081927864}
+  m_Layer: 0
+  m_Name: VRSpawn (4)
+  m_TagString: MouseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1081927864
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1072569276}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1081927863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.98, y: 0.04, z: 33.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1581278568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1090385838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,12 +3639,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090385838}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1101380009
 GameObject:
+=======
+--- !u!1 &1151525306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1098744505720810010, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
+  m_PrefabInstance: {fileID: 4325573387992022176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1151525310
+MeshCollider:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101380010}
@@ -3435,6 +3761,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163392943}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1151525306}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 3703cdf9e064b744dba2d66cc6bdda8b, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &1174885465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3495,7 +3839,90 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 384029563}
   m_SourcePrefab: {fileID: 100100000, guid: 8c7f9bc694eae4b42be2654255aba288, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1287768032
+=======
+--- !u!1001 &1261393869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3757478634018457363, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757478634018457363, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.505227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.978998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.835838
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159437641144866074, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176608296015714948, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176608296015714948, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845817560373410171, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      propertyPath: m_Name
+      value: VRStartLocation
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4357909354693548804, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2090539776266926542, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+--- !u!1 &1286346252
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3503,22 +3930,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1287768033}
   - component: {fileID: 1287768035}
   - component: {fileID: 1287768034}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
+=======
+  - component: {fileID: 1286346253}
+  m_Layer: 0
+  m_Name: CheeseSpawn (10)
+  m_TagString: CheeseSpawnPoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &1287768033
 RectTransform:
+=======
+--- !u!4 &1286346253
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1287768032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3631,6 +4071,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287768032}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1286346252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.37, y: 0, z: 49.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1305179278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4563,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370229622}
   m_CullTransparentMesh: 1
+--- !u!114 &1407001078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6669719980268288208, guid: 4ae83ba8214fec049a79497e34235b4f, type: 3}
+  m_PrefabInstance: {fileID: 1362207828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f955a46da71f84e9003473898e65fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1408855328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,6 +4710,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408855328}
   m_CullTransparentMesh: 1
+--- !u!1 &1430952677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430952678}
+  m_Layer: 0
+  m_Name: CheeseSpawn (2)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1430952678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430952677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.13, y: 0, z: 16.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1442801683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6579945156031716874, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
+  m_PrefabInstance: {fileID: 4325573387992022176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1442801687
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442801683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 3703cdf9e064b744dba2d66cc6bdda8b, type: 3}
 --- !u!1 &1446086362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,6 +4904,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446086362}
   m_CullTransparentMesh: 1
+--- !u!1 &1495477470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495477471}
+  m_Layer: 0
+  m_Name: VRSpawn (5)
+  m_TagString: MouseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495477471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495477470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.73, y: 0.04, z: 4.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1581278568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1502024805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4394,15 +4945,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6
+      value: 2.505227
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.994625
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream
       value: 1.51
+=======
+      value: 2.835838
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4410,15 +4965,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4431,6 +4986,10 @@ PrefabInstance:
     - target: {fileID: 4370376313173473847, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451167557675419136, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7474787160090437783, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_Name
@@ -4445,7 +5004,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1534526766
+=======
+--- !u!1 &1581278567
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4453,21 +5016,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1534526767}
   - component: {fileID: 1534526768}
   m_Layer: 5
   m_Name: CatWinPopup
+=======
+  - component: {fileID: 1581278568}
+  m_Layer: 0
+  m_Name: VRSpawnPoints
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &1534526767
 RectTransform:
+=======
+--- !u!4 &1581278568
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1534526766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -4544,6 +5119,21 @@ RectTransform:
   m_AnchoredPosition: {x: -86.86797, y: -11.72275}
   m_SizeDelta: {x: 62.822956, y: 56.150566}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+  m_GameObject: {fileID: 1581278567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.505227, y: -24.019, z: 2.835838}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 745170524}
+  - {fileID: 1901878859}
+  - {fileID: 1081927864}
+  - {fileID: 1495477471}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1581403646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5859,68 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1867895520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867895521}
+  m_Layer: 0
+  m_Name: CheeseSpawn (8)
+  m_TagString: CheeseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867895521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867895520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.67, y: 0, z: 24.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1901878858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901878859}
+  m_Layer: 0
+  m_Name: VRSpawn (3)
+  m_TagString: MouseSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901878859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901878858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.98, y: 0.04, z: 24.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1581278568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1905717058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5325,6 +5977,30 @@ PrefabInstance:
       propertyPath: catPrefab
       value: 
       objectReference: {fileID: 2137861146124022983, guid: ce6c36d6e0dad514c94856c06f66e438, type: 3}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: mouseSpawnPoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: 'mouseSpawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 745170523}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: 'mouseSpawnPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1901878858}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: 'mouseSpawnPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1081927863}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: 'mouseSpawnPoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1495477470}
+    - target: {fileID: 632683751015870070, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+      propertyPath: 'mouseSpawnPoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1057275262531850009, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
       propertyPath: m_Name
       value: PlayerManager
@@ -5338,7 +6014,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83572208adfb904d8c517e7481b7a9b, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1954374619
+=======
+--- !u!1 &2049443958
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5346,20 +6026,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1954374620}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
+=======
+  - component: {fileID: 2049443959}
+  m_Layer: 0
+  m_Name: CheeseSpawn (4)
+  m_TagString: CheeseSpawnPoint
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!224 &1954374620
 RectTransform:
+=======
+--- !u!4 &2049443959
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1954374619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 23}
@@ -5529,6 +6222,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004931521}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 2049443958}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.59, y: 0, z: 29.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272251001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &2072496444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,7 +6319,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6579945156031716874, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1442801687}
+    - targetCorrespondingSourceObject: {fileID: 1098744505720810010, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1151525310}
   m_SourcePrefab: {fileID: 100100000, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -5646,3 +6356,6 @@ SceneRoots:
   - {fileID: 1305179279}
   - {fileID: 732339056}
   - {fileID: 1502024805}
+  - {fileID: 1261393869}
+  - {fileID: 1581278568}
+  - {fileID: 272251001}

@@ -15,6 +15,11 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        if (GameObject.FindGameObjectsWithTag("AudioServer").Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
         //UnityEngine.Debug.Log(Application.dataPath);
         if (Application.isEditor)
         {

@@ -11,6 +11,7 @@ TagManager:
   - MousePuppet
   - PlayerPrefab
   - CheeseSpawnPoint
+  - Controls
   layers:
   - Default
   - TransparentFX

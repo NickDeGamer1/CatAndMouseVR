@@ -14,6 +14,7 @@ public class VRSpawnLocation : MonoBehaviour
         if (other.gameObject.CompareTag("VRPlayer"))
         {
             //Emit Game started
+            GameObject.FindAnyObjectByType<RoundTimer>().StartCountdownTimer();
 
             Destroy(gameObject);
         }

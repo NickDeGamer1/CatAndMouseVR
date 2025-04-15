@@ -45,6 +45,8 @@ public class VRPlayer : MonoBehaviour
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
     private float FSReset = 1f;
+    private bool MovingIsAct = false;
+    public float timer = 10f;
 
     TCPClient audioserver;
 
@@ -70,21 +72,32 @@ public class VRPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float movement = (LeftHand.movementNum + RightHand.movementNum) / 2;
-        if (movement > .01f)
+        if (MovingIsAct)
         {
-            isMove = true;
-            moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
-            moveDir = moveDir.normalized;
-            moveDir = Vector3.Scale(moveDir, new Vector3(speed, 0, speed));
-            cc.Move(moveDir);
+            float movement = (LeftHand.movementNum + RightHand.movementNum) / 2;
+            if (movement > .01f)
+            {
+                isMove = true;
+                moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
+                moveDir = moveDir.normalized;
+                moveDir = Vector3.Scale(moveDir, new Vector3(speed, 0, speed));
+                cc.Move(moveDir);
+            }
+            else
+            {
+                isMove = false;
+            }
         }
         else
         {
-            isMove = false;
+            if (timer < 0)
+                MovingIsAct = true;
+            else
+                timer -= Time.deltaTime;
         }
 
-        FSReset -= Time.deltaTime;
+
+            FSReset -= Time.deltaTime;
         if (FSReset < 0)
         {
             FSPlayersUpdate();
@@ -98,12 +111,14 @@ public class VRPlayer : MonoBehaviour
             if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out Vector2 primary2DAxisValue))
             {
                 //Debug.Log(primary2DAxisValue.ToString());
-                LookVR(primary2DAxisValue.x);
+                if (primary2DAxisValue.x > .05f || primary2DAxisValue.x < -.05f)
+                    LookVR(primary2DAxisValue.x);
             }
         }
 
-        //SendHapticFeedback(1, Time.deltaTime);
-        //SendHapticFeedback(1, Time.deltaTime);
+
+        cc.center = new Vector3(0, head.transform.localPosition.y / 2, 0);
+        cc.height = head.transform.localPosition.y;
 
         float dist = vibCutoff + 1;
 

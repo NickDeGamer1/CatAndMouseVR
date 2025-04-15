@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class RoundTimer : MonoBehaviour
 {
-    bool active = false;
+
+    [SerializeField]
+    float startTime = 10;
 
     [SerializeField]
     float time;
+
+    private bool startTimerActive = false;
+    private bool active = false;
 
     public float timerSpeed = 1.0f;
 
@@ -19,6 +24,11 @@ public class RoundTimer : MonoBehaviour
     void Start()
     {
         gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
+    }
+
+    public void StartCountdownTimer()
+    {
+        startTimerActive = true;
     }
 
     public void StartTimer()
@@ -33,6 +43,18 @@ public class RoundTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (startTimerActive)
+        {
+            startTime -= Time.deltaTime;
+            tmpro.text = ((int)startTime).ToString();
+
+            if (startTime < 0)
+            {
+                startTimerActive = false;
+                GameObject.FindAnyObjectByType<c_GameManager>().StartGame();
+            }
+        }
+
         if (active)
         {
             time -= Time.deltaTime * timerSpeed;

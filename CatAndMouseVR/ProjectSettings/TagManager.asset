@@ -10,6 +10,7 @@ TagManager:
   - MouseSpawnPoint
   - MousePuppet
   - PlayerPrefab
+  - CheeseSpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - No post Processing
   - 
   - 
   - 

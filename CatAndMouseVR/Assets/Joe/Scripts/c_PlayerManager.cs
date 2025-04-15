@@ -49,10 +49,6 @@ public class c_PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        //PlayerInputManager.instance.JoinPlayer(0, 0, null);
-
-        PlayerInputManager.instance.playerPrefab = vrPrefab;
-        PlayerInputManager.instance.JoinPlayer(0, -5, null); // "XR");
         PlayerInputManager.instance.playerPrefab = catPrefab;
     }
 

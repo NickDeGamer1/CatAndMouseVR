@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class c_GameManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class c_GameManager : MonoBehaviour
     private TextMeshProUGUI popupText;
     private Animator catWinAnim;
 
-    private float gameEndingTimer = 4f;
+    private float gameEndingTimer = 10f;
     private bool gameEnding = false;
 
 
@@ -147,7 +148,7 @@ public class c_GameManager : MonoBehaviour
         
         if (gameEndingTimer <= 0){
 
-            //SceneManager.LoadScene(SceneManager.GetActiveScene());
+            SceneManager.LoadScene("sc_mainMap");
         }
         
     }

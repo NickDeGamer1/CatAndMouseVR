@@ -13,7 +13,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 
 public class VRPlayer : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 10f;
     [SerializeField]
     GameObject LeftHandObject;
     VRHand LeftHand;
@@ -45,7 +45,7 @@ public class VRPlayer : MonoBehaviour
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
     private float FSReset = 1f;
-    private bool MovingIsAct = false;
+    private bool MovingIsAct = true;
     public float timer = 10f;
 
     TCPClient audioserver;
@@ -80,7 +80,7 @@ public class VRPlayer : MonoBehaviour
                 isMove = true;
                 moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
                 moveDir = moveDir.normalized;
-                moveDir = Vector3.Scale(moveDir, new Vector3(speed, 0, speed));
+                moveDir = Vector3.Scale(moveDir, new Vector3(speed * Time.deltaTime, 0, speed * Time.deltaTime));
                 cc.Move(moveDir);
             }
             else
@@ -97,7 +97,7 @@ public class VRPlayer : MonoBehaviour
         }
 
 
-            FSReset -= Time.deltaTime;
+        FSReset -= Time.deltaTime;
         if (FSReset < 0)
         {
             FSPlayersUpdate();
@@ -116,9 +116,9 @@ public class VRPlayer : MonoBehaviour
             }
         }
 
-
-        cc.center = new Vector3(0, head.transform.localPosition.y / 2, 0);
+        cc.center = new Vector3(head.transform.localPosition.x, head.transform.localPosition.y / 2, head.transform.localPosition.z);
         cc.height = head.transform.localPosition.y;
+
 
         float dist = vibCutoff + 1;
 

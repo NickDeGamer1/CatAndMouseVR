@@ -17,6 +17,7 @@ public class RoundTimer : MonoBehaviour
     public float timerSpeed = 1.0f;
 
     public TextMeshProUGUI tmpro;
+    public TextMeshPro playerTimeDisplay;
 
     private c_GameManager gameManaga;
 
@@ -28,6 +29,7 @@ public class RoundTimer : MonoBehaviour
 
     public void StartCountdownTimer()
     {
+        playerTimeDisplay.enabled = true;
         startTimerActive = true;
     }
 
@@ -47,10 +49,12 @@ public class RoundTimer : MonoBehaviour
         {
             startTime -= Time.deltaTime;
             tmpro.text = ((int)startTime).ToString();
+            playerTimeDisplay.text = ((int)startTime).ToString();
 
             if (startTime < 0)
             {
                 startTimerActive = false;
+                playerTimeDisplay.enabled = false;
                 GameObject.FindAnyObjectByType<c_GameManager>().StartGame();
             }
         }

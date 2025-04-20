@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CheeseManager : MonoBehaviour
@@ -15,7 +16,6 @@ public class CheeseManager : MonoBehaviour
     void Start()
     {
         CheeseSpawns = GameObject.FindGameObjectsWithTag("CheeseSpawnPoint");
-        SpawnCheese();
     }
 
     // Update is called once per frame
@@ -32,11 +32,11 @@ public class CheeseManager : MonoBehaviour
         }
     }
 
-    void SpawnCheese()
+    public void SpawnCheese()
     {
-        int num = Random.Range(0, CheeseSpawns.Length-1);
+        int num = UnityEngine.Random.Range(0, CheeseSpawns.Length-1);
         GameObject go = GameObject.Instantiate(cheesePrefab);
         go.transform.position = CheeseSpawns[num].transform.position;
-        CheeseActive=true;
+        CheeseActive = true;
     }
 }

@@ -8,6 +8,7 @@ public class Cheese : MonoBehaviour
     ParticleSystem Part;
 
     bool active = true;
+    public bool Starting = false;
 
     RoundTimer timer;
 
@@ -42,12 +43,21 @@ public class Cheese : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (active)
+        if (!Starting)
         {
-            timer.timerSpeed = timer.timerSpeed * 1.25f;
-            Model.GetComponent<MeshRenderer>().enabled = false;
-            GameObject.FindAnyObjectByType<CheeseManager>().CheeseActive = false;
-            active = false;
+            if (active)
+            {
+                timer.timerSpeed = timer.timerSpeed * 1.25f;
+                Model.GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindAnyObjectByType<CheeseManager>().CheeseActive = false;
+                active = false;
+            }
+        }
+        else
+        {
+            GameObject.FindAnyObjectByType<RoundTimer>().StartCountdownTimer();
+
+            Destroy(gameObject);
         }
     }
 }

@@ -9117,10 +9117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRStartLocation
       objectReference: {fileID: 0}
-    - target: {fileID: 8845817560373410171, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9129,6 +9125,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 2090539776266926542, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6674345083931511893, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6884085285725395629, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
@@ -9192,6 +9194,10 @@ PrefabInstance:
       propertyPath: tmpro
       value: 
       objectReference: {fileID: 1787669045}
+    - target: {fileID: 6669719980268288208, guid: 4ae83ba8214fec049a79497e34235b4f, type: 3}
+      propertyPath: volume
+      value: 
+      objectReference: {fileID: 1842260839}
     - target: {fileID: 6669719980268288208, guid: 4ae83ba8214fec049a79497e34235b4f, type: 3}
       propertyPath: playerTimeDisplay
       value: 
@@ -10240,7 +10246,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1502024805}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -10329,7 +10335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2506203643379934666, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3011594863418912439, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_Mesh
@@ -10380,6 +10386,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10411,13 +10421,28 @@ PrefabInstance:
       propertyPath: m_TagString
       value: VRPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7889728855542966330, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889728855542966330, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: 'm_Cameras.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889728855542966330, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: 'm_Cameras.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8608553564540414051, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       insertIndex: 0
       addedObject: {fileID: 299915375}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2506203643379934666, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
 --- !u!1 &1506650925
 GameObject:
@@ -12353,7 +12378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1842260840
 MonoBehaviour:
   m_ObjectHideFlags: 0

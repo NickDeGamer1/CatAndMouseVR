@@ -11,6 +11,9 @@ public class RoundTimer : MonoBehaviour
     [SerializeField]
     float time;
 
+    [SerializeField]
+    GameObject volume;
+
     private bool startTimerActive = false;
     private bool active = false;
 
@@ -50,6 +53,12 @@ public class RoundTimer : MonoBehaviour
             startTime -= Time.deltaTime;
             tmpro.text = ((int)startTime).ToString();
             playerTimeDisplay.text = ((int)startTime).ToString();
+
+            if (startTime < 4 && !volume.activeSelf)
+            {
+                volume.SetActive(true);
+                playerTimeDisplay.color = Color.red;
+            }
 
             if (startTime < 0)
             {

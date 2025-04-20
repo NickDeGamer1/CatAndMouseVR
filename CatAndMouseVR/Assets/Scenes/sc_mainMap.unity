@@ -9119,12 +9119,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8845817560373410171, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4357909354693548804, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2090539776266926542, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9706fcb9696479f4fb6ad79183e09628, type: 3}
 --- !u!1001 &1362207828
 PrefabInstance:
@@ -12347,7 +12353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1842260840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13784,7 +13790,7 @@ PrefabInstance:
     - target: {fileID: 3883084803510885164, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ad832f185db40f84698460967915f8fc, type: 2}
+      objectReference: {fileID: 2100000, guid: e6d55c0b3d40a9b4f9962abab1a6d5cb, type: 2}
     - target: {fileID: 3907801120725471897, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -13824,7 +13830,7 @@ PrefabInstance:
     - target: {fileID: 4602480942677411278, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ad832f185db40f84698460967915f8fc, type: 2}
+      objectReference: {fileID: 2100000, guid: e6d55c0b3d40a9b4f9962abab1a6d5cb, type: 2}
     - target: {fileID: 4627760965144838005, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

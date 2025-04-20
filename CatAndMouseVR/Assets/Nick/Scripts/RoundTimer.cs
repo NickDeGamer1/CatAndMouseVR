@@ -19,6 +19,9 @@ public class RoundTimer : MonoBehaviour
 
     public float timerSpeed = 1.0f;
 
+    [SerializeField]
+    public GameObject tmpproObject;
+    private Animator tmproAnim;
     public TextMeshProUGUI tmpro;
     public TextMeshPro playerTimeDisplay;
 
@@ -28,12 +31,14 @@ public class RoundTimer : MonoBehaviour
     void Start()
     {
         gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
+        tmproAnim = tmpproObject.GetComponent<Animator>();
     }
 
     public void StartCountdownTimer()
     {
         playerTimeDisplay.enabled = true;
         startTimerActive = true;
+        tmproAnim.SetBool("countDown", true);
     }
 
     public void StartTimer()
@@ -51,7 +56,14 @@ public class RoundTimer : MonoBehaviour
         if (startTimerActive)
         {
             startTime -= Time.deltaTime;
-            tmpro.text = ((int)startTime).ToString();
+            
+            if (startTime > 1)
+            {
+                tmpro.text = ((int)startTime).ToString();
+            }else{
+                tmpro.text = "CHASE!";
+            }
+            
             playerTimeDisplay.text = ((int)startTime).ToString();
 
             if (startTime < 4 && !volume.activeSelf)
@@ -63,8 +75,10 @@ public class RoundTimer : MonoBehaviour
             if (startTime < 0)
             {
                 startTimerActive = false;
+                active = true;
                 playerTimeDisplay.enabled = false;
-                GameObject.FindAnyObjectByType<c_GameManager>().StartGame();
+                gameManaga.tpCats();
+                tmproAnim.SetBool("countDown", false);
             }
         }
 

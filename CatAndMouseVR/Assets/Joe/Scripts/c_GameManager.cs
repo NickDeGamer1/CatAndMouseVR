@@ -52,6 +52,8 @@ public class c_GameManager : MonoBehaviour
         roundStartCams[3].enabled = false;
 
         timerText.SetActive(false);
+        
+        timerBox.SetActive(false);
 
         catNames[0] = GameObject.Find("Name1").GetComponent<TextMeshProUGUI>();
         catNames[1] = GameObject.Find("Name2").GetComponent<TextMeshProUGUI>();
@@ -70,21 +72,13 @@ public class c_GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        roundStartCams[0].enabled = false;
-        roundStartCams[1].enabled = false;
-        roundStartCams[2].enabled = false;
-        roundStartCams[3].enabled = false;
-
-        timerText.SetActive(true);
-
         controlsBox.SetActive(false);
 
-        catNames[0].text = "";
-        catNames[1].text = "";
-        catNames[2].text = "";
-        catNames[3].text = "";
+        timerBox.SetActive(true);
+
+        timerText.SetActive(true);
         
-        bkgImg.CrossFadeColor(darkerColor, 4, true, false);
+        bkgImg.CrossFadeColor(darkerColor, 11, true, false);
 
         pressStartText[0].SetActive(false);
         pressStartText[1].SetActive(false);
@@ -93,6 +87,23 @@ public class c_GameManager : MonoBehaviour
 
         cats = GameObject.FindGameObjectsWithTag("PlayerPrefab");
 
+        
+
+        roundTimer.StartCountdownTimer();
+    }
+
+    public void tpCats()
+    {
+        catNames[0].text = "";
+        catNames[1].text = "";
+        catNames[2].text = "";
+        catNames[3].text = "";
+
+        roundStartCams[0].enabled = false;
+        roundStartCams[1].enabled = false;
+        roundStartCams[2].enabled = false;
+        roundStartCams[3].enabled = false;
+
         for (int i = 0; i < cats.Length; i++) 
         {
             cats[i].GetComponent<CharacterController>().enabled = false;
@@ -100,8 +111,6 @@ public class c_GameManager : MonoBehaviour
             cats[i].GetComponent<CharacterController>().enabled = true;
             cats[i].GetComponent<c_CatController>().SwitchState(cats[i].GetComponent<c_CatController>().idleState);
         }
-
-        roundTimer.StartTimer();
     }
 
     public void WinGame(GameObject catID)
@@ -117,6 +126,7 @@ public class c_GameManager : MonoBehaviour
 
             //Set cat that won to full screeen
             catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].rect = new Rect(0, 0, 1, 1);
+            catCams.catCams[catID.GetComponent<PlayerInput>().playerIndex-1].depth = 1000;
         
             catWinAnim.SetTrigger("CatWin");
 

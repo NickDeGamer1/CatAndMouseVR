@@ -6,6 +6,8 @@ public class Cheese : MonoBehaviour
     GameObject Model;
     [SerializeField]
     ParticleSystem Part;
+    
+    private c_GameManager gameManaga;
 
     bool active = true;
     public bool Starting = false;
@@ -20,6 +22,7 @@ public class Cheese : MonoBehaviour
     void Start()
     {
         timer = FindAnyObjectByType<RoundTimer>();
+        gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
     }
 
     // Update is called once per frame
@@ -55,7 +58,7 @@ public class Cheese : MonoBehaviour
         }
         else
         {
-            GameObject.FindAnyObjectByType<RoundTimer>().StartCountdownTimer();
+            gameManaga.StartGame();
 
             Destroy(gameObject);
         }

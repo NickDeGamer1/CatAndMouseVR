@@ -130,6 +130,8 @@ public class c_GameManager : MonoBehaviour
         
             catWinAnim.SetTrigger("CatWin");
 
+            GameObject.FindAnyObjectByType<VRPlayer>().lose(catID.GetComponent<PlayerInput>().playerIndex);
+
             gameEnding = true;
         }
 

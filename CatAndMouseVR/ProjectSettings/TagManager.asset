@@ -12,6 +12,7 @@ TagManager:
   - PlayerPrefab
   - CheeseSpawnPoint
   - Controls
+  - JumpscareCat
   layers:
   - Default
   - TransparentFX

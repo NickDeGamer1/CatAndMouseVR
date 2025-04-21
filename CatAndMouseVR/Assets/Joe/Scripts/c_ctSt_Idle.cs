@@ -14,7 +14,7 @@ public class c_ctSt_Idle : c_ctSt_Class
     public override void UpdateState(c_CatController player)
     {
         //Water we doing?
-        Debug.Log("idling");
+        //Debug.Log("idling");
         player.EnsureGrounded();
 
         //Move when we move

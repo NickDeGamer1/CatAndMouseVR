@@ -58,9 +58,11 @@ public class Cheese : MonoBehaviour
         }
         else
         {
-            gameManaga.StartGame();
-
-            Destroy(gameObject);
+            if (GameObject.FindFirstObjectByType<c_PlayerManager>().playerList.Count > 1)
+            {
+                gameManaga.StartGame();
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -331,7 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To move, broadly swing you're arms like your running.
+  m_text: To move, broadly swing your arms like your running.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e773c11d099aba4882000baa6950551, type: 2}
   m_sharedMaterial: {fileID: -2133674690243751921, guid: 5e773c11d099aba4882000baa6950551, type: 2}

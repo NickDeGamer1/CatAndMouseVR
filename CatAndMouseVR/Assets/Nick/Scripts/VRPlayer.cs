@@ -10,6 +10,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
+using Unity.XR.CoreUtils;
 
 public class VRPlayer : MonoBehaviour
 {
@@ -24,8 +25,13 @@ public class VRPlayer : MonoBehaviour
     Camera head;
     [SerializeField, Range(1, 100)]
     float vibCutoff = 1f;
+
     [SerializeField]
-    VolumeProfile vp;
+    GameObject LoseScreenVR;
+    [SerializeField]
+    GameObject JumpScareCat;
+    [SerializeField]
+    AudioSource JumpScareAudio;
 
 
     public bool isMove = false;
@@ -157,5 +163,14 @@ public class VRPlayer : MonoBehaviour
     public void LookVR(float movex)
     {
         transform.Rotate(0, movex * 1.5f, 0);
+    }
+
+    public void lose(int playnum)
+    {
+        GameObject.FindWithTag("MousePuppet").SetActive(false);
+        head.enabled = false;
+        head.GetComponent<AudioListener>().enabled = false;
+        LoseScreenVR.GetNamedChild("Camera").GetComponent<AudioListener>().enabled = true;
+        FindAnyObjectByType<JumpscareCat>().StartJump(playnum);
     }
 }

@@ -17,7 +17,7 @@ public class c_ctSt_Walk : c_ctSt_Class
         player.EnsureGrounded();
 
         //When do we gtfo?
-        Debug.Log("walking");
+        //Debug.Log("walking");
 
         //walk when we walk
         if ((player.SENSI > player.movementInput.magnitude) || ((-1 * player.SENSI) < player.movementInput.magnitude))

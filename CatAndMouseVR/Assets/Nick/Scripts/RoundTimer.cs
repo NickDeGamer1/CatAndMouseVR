@@ -14,6 +14,9 @@ public class RoundTimer : MonoBehaviour
     [SerializeField]
     GameObject volume;
 
+    [SerializeField]
+    GameObject StartingPlace;
+
     private bool startTimerActive = false;
     private bool active = false;
 
@@ -24,6 +27,15 @@ public class RoundTimer : MonoBehaviour
     private Animator tmproAnim;
     public TextMeshProUGUI tmpro;
     public TextMeshPro playerTimeDisplay;
+
+    [SerializeField]
+    Animator mouseTimer;
+
+    [SerializeField]
+    AudioSource countdownNoise;
+
+    [SerializeField]
+    GameObject vrStartArea;
 
     [SerializeField]
     public GameObject mouseDisplay;
@@ -45,6 +57,8 @@ public class RoundTimer : MonoBehaviour
         startTimerActive = true;
         tmproAnim.SetBool("countDown", true);
         mouseDisplayAnim.SetBool("timerGoing", true);
+        mouseTimer.SetTrigger("Active");
+        countdownNoise.Play();
     }
 
     public void StartTimer()
@@ -70,8 +84,11 @@ public class RoundTimer : MonoBehaviour
             }else{
                 tmpro.text = "CHASE!";
             }
-            
+
             playerTimeDisplay.text = ((int)startTime).ToString();
+
+            
+            
 
             if (startTime < 4 && !volume.activeSelf)
             {
@@ -86,7 +103,7 @@ public class RoundTimer : MonoBehaviour
                 playerTimeDisplay.enabled = false;
                 gameManaga.tpCats();
                 tmproAnim.SetBool("countDown", false);
-                mouseDisplayAnim.SetBool("timerGoing", false);
+                Destroy(vrStartArea);
             }
         }
 

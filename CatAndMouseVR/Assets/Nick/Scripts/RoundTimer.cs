@@ -25,6 +25,10 @@ public class RoundTimer : MonoBehaviour
     public TextMeshProUGUI tmpro;
     public TextMeshPro playerTimeDisplay;
 
+    [SerializeField]
+    public GameObject mouseDisplay;
+    private Animator mouseDisplayAnim;
+
     private c_GameManager gameManaga;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +36,7 @@ public class RoundTimer : MonoBehaviour
     {
         gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
         tmproAnim = tmpproObject.GetComponent<Animator>();
+        mouseDisplayAnim = mouseDisplay.GetComponent<Animator>();
     }
 
     public void StartCountdownTimer()
@@ -39,6 +44,7 @@ public class RoundTimer : MonoBehaviour
         playerTimeDisplay.enabled = true;
         startTimerActive = true;
         tmproAnim.SetBool("countDown", true);
+        mouseDisplayAnim.SetBool("timerGoing", true);
     }
 
     public void StartTimer()
@@ -55,6 +61,7 @@ public class RoundTimer : MonoBehaviour
     {
         if (startTimerActive)
         {
+
             startTime -= Time.deltaTime;
             
             if (startTime > 1)
@@ -79,6 +86,7 @@ public class RoundTimer : MonoBehaviour
                 playerTimeDisplay.enabled = false;
                 gameManaga.tpCats();
                 tmproAnim.SetBool("countDown", false);
+                mouseDisplayAnim.SetBool("timerGoing", false);
             }
         }
 

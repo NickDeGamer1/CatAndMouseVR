@@ -95,7 +95,13 @@ public class RoundTimer : MonoBehaviour
                 volume.SetActive(true);
                 playerTimeDisplay.color = Color.red;
             }
+            
+            if (startTime < 1)
+            {
+                playerTimeDisplay.text = "RUN!";
+            }
 
+            
             if (startTime < 0)
             {
                 startTimerActive = false;
@@ -103,6 +109,21 @@ public class RoundTimer : MonoBehaviour
                 playerTimeDisplay.enabled = false;
                 gameManaga.tpCats();
                 tmproAnim.SetBool("countDown", false);
+                int count = GameObject.FindAnyObjectByType<c_PlayerManager>().playerList.Count;
+
+                switch (count)
+                {
+                    case 2:
+                    case 3:
+                        GameObject.FindAnyObjectByType<VRPlayer>().speed = 7.5f;
+                        break;
+                    default:
+                        GameObject.FindAnyObjectByType<VRPlayer>().speed = 10f;
+                        break;
+                }
+
+
+                GameObject.FindAnyObjectByType<AmbinetNoise>().active = true;
                 Destroy(vrStartArea);
             }
         }

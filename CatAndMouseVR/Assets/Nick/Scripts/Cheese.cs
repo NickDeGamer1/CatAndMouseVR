@@ -52,7 +52,7 @@ public class Cheese : MonoBehaviour
             {
                 timer.timerSpeed = timer.timerSpeed * 1.25f;
                 Model.GetComponent<MeshRenderer>().enabled = false;
-                GameObject.FindAnyObjectByType<CheeseManager>().CheeseActive = false;
+                //GameObject.FindAnyObjectByType<CheeseManager>().CheeseActive = false;
                 active = false;
             }
         }

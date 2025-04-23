@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class CheeseManager : MonoBehaviour
 {
-    public bool CheeseActive = true;
-    float CheeseTime = 45f;
+    public bool CheeseActive = false;
+    public float CheeseTime = 45f;
+    private float CheeseReset;
 
 
     [SerializeField]
@@ -16,12 +17,13 @@ public class CheeseManager : MonoBehaviour
     void Start()
     {
         CheeseSpawns = GameObject.FindGameObjectsWithTag("CheeseSpawnPoint");
+        CheeseReset = CheeseTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!CheeseActive)
+        if (CheeseActive)
         {
             CheeseTime -= Time.deltaTime;
 
@@ -37,6 +39,7 @@ public class CheeseManager : MonoBehaviour
         int num = UnityEngine.Random.Range(0, CheeseSpawns.Length-1);
         GameObject go = GameObject.Instantiate(cheesePrefab);
         go.transform.position = CheeseSpawns[num].transform.position;
+        CheeseTime = CheeseReset;
         CheeseActive = true;
     }
 }

@@ -124,6 +124,7 @@ public class RoundTimer : MonoBehaviour
 
 
                 GameObject.FindAnyObjectByType<AmbinetNoise>().active = true;
+                GameObject.FindAnyObjectByType<CheeseManager>().SpawnCheese();
                 Destroy(vrStartArea);
             }
         }
@@ -140,9 +141,11 @@ public class RoundTimer : MonoBehaviour
             if (time < 0)
             {
                 active = false;
-                Debug.Log("Mouse Wins!");
+                //Debug.Log("Mouse Wins!");
                 gameManaga.LoseGame();
-
+                playerTimeDisplay.enabled = true;
+                playerTimeDisplay.color = Color.green;
+                playerTimeDisplay.text = "You Win!";
                 //change scene to win
             }
         }

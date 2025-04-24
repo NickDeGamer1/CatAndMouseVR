@@ -109,6 +109,8 @@ public class RoundTimer : MonoBehaviour
                 playerTimeDisplay.enabled = false;
                 gameManaga.tpCats();
                 tmproAnim.SetBool("countDown", false);
+                mouseDisplayAnim.SetBool("timerGoing", true);
+                mouseDisplay.SetActive(false);
                 int count = GameObject.FindAnyObjectByType<c_PlayerManager>().playerList.Count;
 
                 switch (count)

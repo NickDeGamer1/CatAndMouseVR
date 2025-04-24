@@ -7,10 +7,11 @@ using System.Collections.Generic;
 
 public class c_CatController : MonoBehaviour
 {
-
+    [Header("Audio")]
     //AUDIO
     public TCPClient audioserver;
 
+    [Header("Cat Movement")]
     //CAT MOVEMENT
     public Vector2 movementInput = Vector2.zero;
     public Vector2 turnInput = Vector2.zero;
@@ -25,6 +26,7 @@ public class c_CatController : MonoBehaviour
     [SerializeField]
     public float SENSI = 0.5f;
     
+    [Header("Gravity/Jumping")]
     //GRAVITY AND SHIZZ
     public Vector3 playerVelocity;
     public bool groundedPlayer;
@@ -33,7 +35,9 @@ public class c_CatController : MonoBehaviour
     public float jumpReset = 1.1f;
     public bool canJump = true;
     private bool timerActive = false;
+    public BoxCollider pounceColl;
 
+    [Header("Animations")]
     //ANIMS
     [SerializeField]
     GameObject catModel;
@@ -54,12 +58,14 @@ public class c_CatController : MonoBehaviour
     public c_ctSt_GettingUp gettingUpState = new c_ctSt_GettingUp();
     public c_ctSt_Start startState = new c_ctSt_Start();
 
+    [Header("Camera")]
     //CAMERA
     public c_CatCameras catCams;
     [SerializeField]
     public PlayerInput playaInput;
     public c_PlayerManager playaManaga;
 
+    [Header("Management")]
     //Management
     public bool hasStarted = false;
     public c_GameManager gameManaga;
@@ -85,6 +91,7 @@ public class c_CatController : MonoBehaviour
         gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
 
         controller.enabled = false;
+        pounceColl.enabled = false;
         transform.position = GameObject.Find("CatSpawnPoint " + playaInput.playerIndex).transform.position;
         controller.enabled = true;
 

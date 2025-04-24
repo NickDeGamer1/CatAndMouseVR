@@ -29,6 +29,7 @@ public class c_ctSt_Idle : c_ctSt_Class
             if (player.canJump)
             {
                 player.SwitchState(player.jumpState);
+                player.pounceColl.enabled = true;
             }else{
                 player.hasJumped = false;
             }

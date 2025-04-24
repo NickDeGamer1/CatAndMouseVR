@@ -24,6 +24,7 @@ public class c_ctSt_Landed : c_ctSt_Class
             //change anim
             player.anim.SetTrigger("gettingUp");
             player.animCreep.SetTrigger("gettingUp");
+            player.pounceColl.enabled = false;
             //remove has jumped
             player.hasJumped = false;
             player.JumpCountDown();

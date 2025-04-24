@@ -5,6 +5,7 @@ public class c_catSkinController : MonoBehaviour
 {
     public int catSkin = 1;
 
+    [Header("Cute Materials")]
     [SerializeField]
     Material[] headMat;
     [SerializeField]
@@ -14,6 +15,7 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     Material[] outlineMat;
 
+    [Header("Creepy Materials")]
     [SerializeField]
     Material[] creepyHeadMat;
     [SerializeField]
@@ -25,6 +27,7 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     Material creepyTeethMat;
     
+    [Header("Cute Cat Objs")]
     //cute cat
     [SerializeField]
     GameObject cuteHeadObj;
@@ -33,6 +36,7 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     GameObject cuteCollarObj;
 
+    [Header("Creepy Cat Objs")]
     //creepy cat
     [SerializeField]
     GameObject creepyHeadObj;
@@ -41,6 +45,7 @@ public class c_catSkinController : MonoBehaviour
     [SerializeField]
     GameObject creepyCollarObj;
 
+    [Header("Misc.")]
     [SerializeField]
     public PlayerInput playaInput;
 

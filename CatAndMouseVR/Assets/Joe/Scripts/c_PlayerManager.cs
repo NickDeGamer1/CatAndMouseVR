@@ -74,7 +74,11 @@ public class c_PlayerManager : MonoBehaviour
     void JoinAction(InputAction.CallbackContext context)
     {
         PlayerInputManager.instance.JoinPlayerFromActionIfNotAlreadyJoined(context);
-
+        GameObject g = GameObject.FindGameObjectWithTag("VRBlock");
+        if (g != null)
+        {
+            Destroy(g);
+        }
     }
     void LeaveAction(InputAction.CallbackContext context)
     {

@@ -51,7 +51,7 @@ public class VRPlayer : MonoBehaviour
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
     private float FSReset = 1f;
-    private bool MovingIsAct = true;
+    private bool MovingIsAct = false;
     public float timer = 10f;
 
     TCPClient audioserver;
@@ -93,13 +93,6 @@ public class VRPlayer : MonoBehaviour
             {
                 isMove = false;
             }
-        }
-        else
-        {
-            if (timer < 0)
-                MovingIsAct = true;
-            else
-                timer -= Time.deltaTime;
         }
 
 
@@ -162,7 +155,11 @@ public class VRPlayer : MonoBehaviour
 
     public void LookVR(float movex)
     {
-        transform.Rotate(0, movex * 1.5f, 0);
+        transform.Rotate(0, movex * Time.deltaTime * speed * 10, 0);
+        if (!MovingIsAct)
+        {
+            MovingIsAct = true;
+        }
     }
 
     public void lose(int playnum)

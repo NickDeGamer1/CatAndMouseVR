@@ -13,6 +13,7 @@ TagManager:
   - CheeseSpawnPoint
   - Controls
   - JumpscareCat
+  - VRBlock
   layers:
   - Default
   - TransparentFX

@@ -40,6 +40,10 @@ public class c_GameManager : MonoBehaviour
     private float gameEndingTimer = 10f;
     private bool gameEnding = false;
 
+    [Header("Audio")]
+    //AUDIO
+    public TCPClient audioserver;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,6 +72,8 @@ public class c_GameManager : MonoBehaviour
         roundTimer = GameObject.Find("RoundTimer").GetComponent<RoundTimer>();
 
         //StartGame();
+        //Audio
+        audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
     }
 
     public void StartGame()
@@ -87,9 +93,9 @@ public class c_GameManager : MonoBehaviour
 
         cats = GameObject.FindGameObjectsWithTag("PlayerPrefab");
 
-        
-        
         roundTimer.StartCountdownTimer();
+        //play countdown
+        audioserver.PlayAudioTV("CountDown.mp3");
     }
 
     public void tpCats()
@@ -120,6 +126,8 @@ public class c_GameManager : MonoBehaviour
             timerBox.SetActive(false);
             dividers.SetActive(false);
             roundTimer.PauseTimer();
+            //play Cat noise
+            audioserver.PlayAudioTV("CatsWin.mp3");
 
             //The camera controller
             c_CatCameras catCams = GameObject.Find("PlayerManager").GetComponent<c_CatCameras>();
@@ -143,6 +151,7 @@ public class c_GameManager : MonoBehaviour
             timerText.SetActive(false);
             timerBox.SetActive(false);
             roundTimer.PauseTimer();
+            audioserver.PlayAudioTV("CatsLose.mp3");
 
             popupText.fontSize = 162;
             popupText.text = "MOUSE WINS!!";

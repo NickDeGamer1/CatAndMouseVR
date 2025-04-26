@@ -168,7 +168,7 @@ public class c_CatController : MonoBehaviour
         playerVelocity += playerForward * (Mathf.Sqrt(jumpForce * -2.0f * gravityValue));
 
         //play Cat noise
-        audioserver.PlayAudioTV("BabaBoohey.wav");
+        audioserver.PlayAudioTV("jump.mp3");
     }
 
     public void Move()

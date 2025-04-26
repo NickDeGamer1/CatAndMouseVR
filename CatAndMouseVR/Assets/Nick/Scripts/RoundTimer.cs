@@ -41,6 +41,10 @@ public class RoundTimer : MonoBehaviour
     public GameObject mouseDisplay;
     private Animator mouseDisplayAnim;
 
+    [Header("Audio")]
+    //AUDIO
+    public TCPClient audioserver;
+
     private c_GameManager gameManaga;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,6 +53,8 @@ public class RoundTimer : MonoBehaviour
         gameManaga = GameObject.Find("GameManager").GetComponent<c_GameManager>();
         tmproAnim = tmpproObject.GetComponent<Animator>();
         mouseDisplayAnim = mouseDisplay.GetComponent<Animator>();
+        //Audio
+        audioserver = GameObject.FindGameObjectWithTag("AudioServer").GetComponent<TCPClient>();
     }
 
     public void StartCountdownTimer()

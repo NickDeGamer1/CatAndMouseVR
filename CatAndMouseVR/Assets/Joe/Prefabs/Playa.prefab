@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8434016676693962687}
   - component: {fileID: 7805191236790901484}
   - component: {fileID: 3155983179955018616}
+  - component: {fileID: 9045420365440551773}
   m_Layer: 0
   m_Name: Playa
   m_TagString: PlayerPrefab
@@ -255,6 +256,20 @@ MonoBehaviour:
   playaManaga: {fileID: 0}
   hasStarted: 0
   gameManaga: {fileID: 0}
+--- !u!114 &9045420365440551773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137861146124022983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0b5675ab6c2184fa2c015ab197fda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cc: {fileID: 7805191236790901484}
+  PushForce: 4
 --- !u!1 &3956884489686068917
 GameObject:
   m_ObjectHideFlags: 0

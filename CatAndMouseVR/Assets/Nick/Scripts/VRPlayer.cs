@@ -48,6 +48,9 @@ public class VRPlayer : MonoBehaviour
 
 
     private CharacterController cc;
+    [SerializeField]
+    public CharacterController MouseCC;
+
     private XRNode rightHand = XRNode.RightHand;
     private XRNode leftHand = XRNode.LeftHand;
     private float FSReset = 1f;
@@ -95,6 +98,7 @@ public class VRPlayer : MonoBehaviour
             }
         }
 
+        transform.position = new Vector3(transform.position.x, -25, transform.position.z);
 
         FSReset -= Time.deltaTime;
         if (FSReset < 0)
@@ -117,7 +121,8 @@ public class VRPlayer : MonoBehaviour
 
         cc.center = new Vector3(head.transform.localPosition.x, head.transform.localPosition.y / 2, head.transform.localPosition.z);
         cc.height = head.transform.localPosition.y;
-
+        MouseCC.center = new Vector3(head.transform.localPosition.x, head.transform.localPosition.y / 2, head.transform.localPosition.z);
+        MouseCC.height = head.transform.localPosition.y;
 
         float dist = vibCutoff + 1;
 

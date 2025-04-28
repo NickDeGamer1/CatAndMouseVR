@@ -40,6 +40,8 @@ public class VRPlayer : MonoBehaviour
     [SerializeField]
     TextMeshPro TMP;
 
+    public float SpeedMp = 1f;
+
 
     [SerializeField]
     GameObject DebugObj;
@@ -81,6 +83,12 @@ public class VRPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //SpeedMp = 24 - Mathf.Abs(head.transform.position.y);
+        //if (SpeedMp > 1)
+        //{
+        //    SpeedMp = 1;
+        //}
+
         if (MovingIsAct)
         {
             float movement = (LeftHand.movementNum + RightHand.movementNum) / 2;
@@ -89,7 +97,7 @@ public class VRPlayer : MonoBehaviour
                 isMove = true;
                 moveDir = -RightHand.GameObject().transform.up + -LeftHand.GameObject().transform.up; //(LeftHand.GameObject().transform.up + RightHand.GameObject().transform.up) / 2;
                 moveDir = moveDir.normalized;
-                moveDir = Vector3.Scale(moveDir, new Vector3(speed * Time.deltaTime, 0, speed * Time.deltaTime));
+                moveDir = Vector3.Scale(moveDir, new Vector3(speed * Time.deltaTime * SpeedMp, 0, speed * Time.deltaTime * SpeedMp));
                 cc.Move(moveDir);
             }
             else
@@ -124,7 +132,9 @@ public class VRPlayer : MonoBehaviour
         MouseCC.center = new Vector3(head.transform.localPosition.x, head.transform.localPosition.y / 2, head.transform.localPosition.z);
         MouseCC.height = head.transform.localPosition.y;
 
-        float dist = vibCutoff + 1;
+        
+
+            float dist = vibCutoff + 1;
 
         foreach(GameObject i in fsPlayers) {
             if (Vector3.Distance(transform.position, i.transform.position) < vibCutoff)

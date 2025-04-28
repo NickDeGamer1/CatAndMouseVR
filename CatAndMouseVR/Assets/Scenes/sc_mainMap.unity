@@ -17799,11 +17799,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_text
-      value: 0
+      value: You Win!
       objectReference: {fileID: 0}
     - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_fontSize
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_margin.x
@@ -17817,6 +17821,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5909803509224686108, guid: 723ce7e7a5ace6246a9a2159207e11cb, type: 3}
       propertyPath: m_sharedMaterial
       value: 

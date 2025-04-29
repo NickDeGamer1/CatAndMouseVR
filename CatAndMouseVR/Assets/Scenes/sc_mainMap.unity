@@ -2700,10 +2700,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 133663426}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4126,10 +4122,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 1890327678}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5112,10 +5104,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 1723901168}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5194,10 +5182,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 954108558}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16198,10 +16182,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 674427793}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22386,10 +22366,6 @@ PrefabInstance:
       propertyPath: Chair
       value: 
       objectReference: {fileID: 1270229299}
-    - target: {fileID: 6745156463839163008, guid: f4f4c0d9f0bb312418128169a987cb11, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 38ed1b7243ab7234b8153eeb0e75d5d7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23033,6 +23009,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7518111938141077964, guid: e9abd4d4ad8242b449b44a2b4f2058f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b52f26d32c7a154e91fc0e03be61d22, type: 2}
     - target: {fileID: 8310635040520953881, guid: e9abd4d4ad8242b449b44a2b4f2058f4, type: 3}
       propertyPath: m_Name
       value: PlantPrefab
@@ -25682,10 +25662,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c55a0d10e32d4bc4a81a2c0ccdf2b135, type: 2}
-    - target: {fileID: 7011827599591781581, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2b52f26d32c7a154e91fc0e03be61d22, type: 2}
     - target: {fileID: 7053825475081297067, guid: b521ccfafd09d7a48b519e229930402a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

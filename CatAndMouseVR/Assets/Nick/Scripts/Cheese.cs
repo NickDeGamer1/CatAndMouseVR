@@ -61,6 +61,7 @@ public class Cheese : MonoBehaviour
             if (GameObject.FindFirstObjectByType<c_PlayerManager>().playerList.Count > 1)
             {
                 gameManaga.StartGame();
+                Destroy(GameObject.FindGameObjectWithTag("ToDelete"));
                 Destroy(gameObject);
             }
         }

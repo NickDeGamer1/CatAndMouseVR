@@ -170,7 +170,8 @@ public class VRPlayer : MonoBehaviour
 
     public void LookVR(float movex)
     {
-        transform.Rotate(0, movex * Time.deltaTime * speed * 10, 0);
+        transform.RotateAround(head.transform.position, Vector3.up, movex * Time.deltaTime * speed * 10);
+        //transform.Rotate(0, movex * Time.deltaTime * speed * 10, 0);
         if (!MovingIsAct)
         {
             MovingIsAct = true;
